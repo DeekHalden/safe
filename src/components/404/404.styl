@@ -1,0 +1,97 @@
+.wrapper-404
+    height 100vh
+    min-height 1000px
+    background #fff
+    .footer-wrapper
+        position absolute
+        bottom 0
+        left 0
+        z-index 5
+
+.not-found-wrapper
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    top 0
+    bottom 0
+    background #fff
+    padding 150px 30px 150px
+    .img-wrapper
+        display inline-block
+        &__img
+            max-width 100%
+            height auto
+    .text
+        vertical-align top
+        display inline-block
+        text-align left
+        color #2a3f48
+        margin-top 40px
+        margin-right 70px
+        &__title
+            margin-left -5px
+            font-size 90px
+            font-family Montserrat-Black
+        &__subtitle
+            font-size 28px
+            font-family Montserrat-ExtraLight
+            text-transform uppercase
+        .btn-group
+            display inline-block
+            margin-top 34px
+            &__btn
+                margin-top 10px
+                text-align center
+                display inline-block
+                color #fff
+                border-radius 5px
+                font-family Montserrat-Bold
+                font-size 15px
+                width 191px
+                padding 15px 0
+                text-decoration none
+                & + .btn-group__btn 
+                    margin-left 27px
+                &:hover
+                    text-decoration underline
+                &--home
+                    background-color #f57c24
+                    &:hover
+                        background-color #ef6400
+                        
+                &--contact
+                    background-color #25a937
+                    &:hover
+                        background-color #219430
+@media(max-width 1199px)
+    .wrapper-404
+        min-height 800px
+    .not-found-wrapper
+        padding 100px 0 0px
+        .text
+            margin-top 70px
+            margin-right 0
+            text-align center
+            &__title
+                font-size 35px
+            &__subtitle
+                font-size 18px
+            
+    
+@media(max-width 960px)
+    .wrapper-404
+        min-height 1000px
+    .not-found-wrapper
+        text-align center
+        .text
+            margin-top 20px
+@media(max-width 480px)
+    .wrapper-404
+        min-height 1000px
+    .not-found-wrapper
+        padding-top 40px
+        .text
+            margin-top 20px
+            .btn-group
+                &__btn
+                    margin-left 0 !important

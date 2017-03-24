@@ -1,0 +1,159 @@
+.footer-wrapper
+    background-color  #2a3f48
+    overflow hidden
+    .footer
+        position relative
+        padding 33px 0 10px
+        color #fff
+        .logo-wrapper, .info-wrap
+            display inline-block
+        .logo-wrapper
+            float left
+            &__copyright
+                margin-top 25px
+                text-align center
+                vertical-align bottom
+                display block
+                font-size 11px
+        .info-wrap
+            margin-top -5px
+            margin-left 330px
+            vertical-align top
+            text-align center
+            &__phone
+                text-align center
+                text-decoration none
+                display block
+                color #fff
+                font-size 20px
+                .img
+                    height 23px
+                    vertical-align middle
+                .tel
+                    margin-left 5px
+                    
+                &:hover
+                    opacity .75
+            &__time-open
+                margin-top 0px
+                display inline-block
+                width 100%
+                font-size 13.22px
+                text-align center
+                
+        
+            &__mail
+                margin-top 25px
+                display block
+                text-decoration none
+                color #fff
+                &:hover
+                    opacity .75
+        .socials
+            position relative
+            right -24px
+            float right
+            width 240px
+            font-size 13px
+            vertical-align top
+            display inline-block
+            .social
+                width 45%
+                display inline-block
+                float left
+                margin-bottom 10px
+                margin-left 5px
+                &__icon
+                    font-size 13px
+                    color #25a937
+                &__link
+                    height 13px
+                    margin-left 10px
+                    display inline-block
+                    text-decoration none
+                    color #fff
+                    &:hover
+                        color #25a937
+        
+        .developed-by
+            display inline-block
+            position absolute
+            bottom 10px
+            right 0
+            clear both
+            &:hover
+                opacity .75
+            .href
+                text-decoration none
+                color #fff
+                &__img
+                    display inline-block
+                    margin-right 10px
+                &__text
+                    display inline-block
+                
+@media(max-width 1199px)
+    .footer-wrapper
+        .footer
+            
+
+            .info-wrap
+                margin-left 212px
+                &__time-open
+                    margin-top 10px
+            .socials
+                text-align left
+                position relative
+                float right
+            .developed-by
+                text-align center
+                // left 0
+                right 0
+                .href
+                    display inline-block
+                    margin 0 auto
+@media(max-width 960px)
+    .footer-wrapper
+        .footer
+            .info-wrap
+                margin-left 104px
+            .socials
+                margin-left 0
+            .footer-nav
+                display none
+@media(max-width 720px)
+    .footer-wrapper
+        .footer
+            padding 30px 0
+            .logo-wrapper
+                width 100px
+                .img-wrapper
+                    &__img
+                        width 100%
+                &__copyright
+                    display none
+            .info-wrap
+                float right
+                margin-left 0
+                margin-bottom 10px
+                &__el, &__time-open
+                    display none
+                &__mail
+                    margin-top 20px
+                
+            .socials
+                text-align center
+                position static
+                margin 30px 0 20px
+                display block
+                width 100%
+                clear both
+            .developed-by
+                display block
+                width 100%
+                position static
+                // clear both
+                margin-top 20px
+                text-align center
+                
+               

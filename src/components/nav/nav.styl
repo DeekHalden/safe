@@ -1,0 +1,59 @@
+.nav
+    
+    display inline-block
+    margin 20px 29px 0
+    
+    &--left
+        display none
+    &__el
+        vertical-align sub
+        font-size 14px
+        text-decoration none
+        color #272c66
+        text-transform uppercase
+        text-align center
+        &:hover
+            color #25a937
+        & + .nav__el
+            margin-left 15px
+        &--active
+            color #25a937
+@media(max-width 1199px)
+    .nav
+        float none
+        margin-top 7px
+        text-align center
+        width 100%
+        display block
+        &__el
+            display inline-block
+            margin 0 10px
+            & + & + .nav__el
+                margin 0 10px
+        
+@media(max-width 720px)
+    .nav
+        display none
+        &__el
+            display block 
+            text-align left
+            margin 0 0 30px !important    
+            color #fff
+            width 65%
+            &:hover
+                color #474747
+        &--left
+            transition .2s linear all
+            position fixed
+            padding 40px 31px
+            z-index 1000
+            top 0
+            height 100%
+            left -215px
+            background-color #25a937
+            width 215px
+            text-align left
+            display block
+            margin-top 0
+        &--active
+            left 0

@@ -1,0 +1,25 @@
+{
+  "name": "gulp",
+  "version": "0.0.1",
+  "description": "Gulp Recipe - Jade, Sass, Livereload and static server",
+  "author": "Chris Kjaer",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "gulp": "~3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "~2.1.7",
+    "gulp-csso": "~0.1.8",
+    "gulp-livereload": "~0.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "~0.1.0",
+    "pug": "^2.0.0-beta6",
+    "pump": "^1.0.2",
+    "stylus": "^0.54.5"
+  },
+  "dependencies": {
+  }
+}

@@ -1,0 +1,21 @@
+.container-fluid.header#header
+    .container.clearfix
+        +b.A().menu-toggle
+            
+        +b.logo
+            +e.IMG(src="./images/logo.png").img
+        include /components/nav/nav
+        +b.email-wrap 
+            span Email us:
+            +e.A(href="info@safederal.com").phone info@safederal.com
+             
+
+        +b.phone-wrap
+            +e.A(href="tel:(333)777-3333").phone (333) 777-3333
+            +e.SPAN.time-open every day 8 A.M.- 8 P.M.
+        +b.phone-xs-visible
+            +e.el.A(class="popup-with-zoom-anim" href="#call-dialog")
+                //- img(src="./images/phone-resp.png")
+        +b.dialog#call-dialog.zoom-anim-dialog.mfp-hide
+            +e.A(href="tel:(333)777-3333").phone (333) 777-3333
+            +e.A(href="tel:(333)777-3333").phone (333) 777-3333

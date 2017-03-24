@@ -1,0 +1,141 @@
+@import '../nav/nav'
+.header
+    color #272c66
+    position fixed 
+    top 0
+    left 0
+    right 0
+    z-index 555
+    background-color #fff
+    box-sizing border-box
+    transiztion .5s linear height
+    &--tiny
+        height 40px
+        .container
+            padding 5px 0px !important
+        .logo
+            width 80px
+        .phone-wrap
+            margin-top -20px
+            // background url('../images/phone.png') no-repeat left 40%
+            &__time-open
+                display none !important
+        
+    .container
+        padding 23px 0px
+        
+        &:after
+            visibility visible
+            position absolute
+            content ''
+            bottom -8px
+            left 0
+            height 8px
+            width 100%
+            background-color #25a937
+    .logo, .phone-wrap
+        display inline-block
+        vertical-align middle
+    .logo
+        margin-right 29px
+        &__img
+            max-width 100%
+    .email-wrap
+        display inline-block
+        &__phone
+            text-decoration none
+            display block
+            font-size 15px
+            &:hover 
+                text-decoration underline
+    .phone-wrap
+        padding-left 25px
+        // background url('../images/phone.png') no-repeat left 20%
+        background-size 10px 20px
+        font-size 23px
+        margin-left 111px
+        text-align center
+        &__phone
+            color #000
+            text-decoration none
+            &:hover
+                opacity .75
+        &__time-open
+            display block
+            font-size 11px
+            
+            
+    .phone-xs-visible, .menu-toggle
+        display none
+
+@media(max-width 1199px)
+    .header
+        text-align justify
+        &:after
+            width 100%
+            left 0
+        .container
+            padding-left 0
+            padding-right 0
+            padding-bottom 30px
+        .logo, .phone-wrap
+            margin-right 0px
+        .phone-wrap
+            display none
+        .logo
+            width 80px
+            float left
+        .phone-xs-visible
+            display block
+            float right
+            &__el
+                display block
+                height 100%
+                
+            
+                    
+@media(max-width 720px)
+    .header
+        &:after
+            visibility visible
+            position absolute
+            content ''
+            bottom -2px
+            left 0
+            height 2px
+            width 100%
+            background-color #25a937
+        .container 
+            text-align center
+            padding 10px 0 
+            
+            &:after
+                visibility hidden
+                height 2px
+                bottom -2px
+        .menu-toggle
+            width 40px 
+            height 40px
+            display block
+            float left
+            cursor pointer
+            
+            // background url('../images/menu-open.png') no-repeat center center
+            &:hover
+                opacity .75
+            &--active
+                // background url('../images/menu-close.png') no-repeat center center
+        .logo
+            float none
+        
+@media(max-width 530px)
+    .header
+        text-align center
+        .phone-wrap
+            display none
+
+    
+@media(max-width 420px)
+    .header
+        .container
+            padding-bottom 10px

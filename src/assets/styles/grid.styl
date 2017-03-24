@@ -1,0 +1,77 @@
+*
+    margin 0
+    padding 0
+    box-sizing border-box
+    -webkit-backface-visibility: hidden
+body
+    // overflow-x hidden
+    position relative
+    font-family TitilliumWeb-Regular
+    
+.wrapper 
+    
+    width 100% 
+    
+.container-fluid
+    width 100%
+    
+.container
+    width 1180px
+    margin 0 auto
+    
+.clearfix:before,.clearfix:after 
+    content ""
+    display table
+    width 0
+    height 0
+    visibility hidden
+.clearfix:after 
+    clear both
+    
+::-webkit-input-placeholder 
+    font-family Montserrat-Light
+    font-size 14px
+:-moz-placeholder 
+   font-family Montserrat-Light
+   font-size 14px
+   
+::-moz-placeholder 
+   font-family Montserrat-Light
+   font-size 14px
+
+:-ms-input-placeholder 
+   font-family Montserrat-Light
+   font-size 14px
+
+::-webkit-inner-spin-button
+    display none
+    -webkit-appearance none
+
+a[href^="http://maps.google.com/maps"] 
+    display none !important
+a[href^="https://maps.google.com/maps"] 
+    display none !important
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc  
+    display none
+
+.gmnoprint div  
+    background none !important
+
+    
+@media(max-width 1200px)
+    .container
+        width 940px
+
+@media(max-width 960px) 
+    .container
+        width 700px
+
+@media(max-width 720px) 
+    .container
+        width 460px
+
+@media(max-width 480px) 
+    .container
+        width 300px
+        
