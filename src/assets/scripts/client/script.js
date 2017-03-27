@@ -50,44 +50,6 @@ $(document).ready(function() {
 
 
     // slide toggle handling
-    $('.quick-quote-form .form-control, .quick-quote-form .form-submit').click(animate);
-
-    $('#quick-quote-form.quick-quote-form__dismiss, #quick-quote-form.quick-quote-form .form-more').click(function(e) {
-        
-        $(this)
-            .find('#quick-quote-form.quick-quote-form')
-            .toggleClass('quick-quote-form--active')
-            .parents('.container')
-            .toggleClass('container--active')
-        $('#quick-quote-form .center').toggleClass('center--active');
-        $('#quick-quote-form .right-side').toggleClass('right-side--active');
-        $('#quick-quote-form .quick-quote-form__dismiss').toggle();
-        $('#quick-quote-form .quick-quote-form .title').toggleClass('title--active');
-        $('#quick-quote-form .quick-quote-form .subtitle').toggleClass('subtitle--active');
-        $('#quick-quote-form .input-group .form-more').toggleClass('form-more--active');
-    });
-
-    var popupForm = $('.quick-quote-form--popup');
-    popupForm.addClass('quick-quote-form--active');
-    popupForm.find('.center').toggleClass('center--active');
-    popupForm.find('.right-side').toggleClass('right-side--active');
-    popupForm.find('.input-group .form-more').hide();
-    function animate(e) {
-        if ($('.center').hasClass('center--active')) {
-            return
-        } else {
-            var parent = $(this).parents('.quick-quote-form');
-            console.log(parent)
-            $('.quick-quote-form__dismiss').toggle();
-            $('.center').toggleClass('center--active');
-            $('.right-side').toggleClass('right-side--active');
-            parent.addClass('quick-quote-form--active');
-            $('.quick-quote-form .title').toggleClass('title--active');
-            $('.quick-quote-form .subtitle').toggleClass('subtitle--active');
-            $('.input-group .form-more').toggleClass('form-more--active');
-        }
-    }
-    // slide toggle handling
 
     // dropdown
     $('.popup-with-zoom-anim').magnificPopup({
@@ -146,11 +108,11 @@ $(document).ready(function() {
         $(this).toggleClass('faq__qw-bold');
     });
 
-    $('.two-items-in-row').slick({
+    $('.form-slider').slick({
         speed: 1500,
         infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         responsive: [{
                 breakpoint: 1199,
                 settings: {
@@ -164,50 +126,41 @@ $(document).ready(function() {
             // instead of a settings object
         ]
     });
-    $('.fullwidth-slider').slick({
-        speed: 1500,
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        responsive: [{
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true
-                }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
-    });
     // form validation
     $('.input-date').datepicker();
-    // $('.input-date-1').datepicker();
 
     $.validate({
-        form: '#quick-quote-form',
+        form: '#top-form',
         validateOnBlur: false,
         scrollToTopOnError: false,
         onValidate: function($form) {
+            var currdate = new Date($('#top-form .input-date').val());
             var dateObject = new Date();
-            var date = dateObject.getDate() + "." + 0 + (dateObject.getMonth() + 1) + "." + dateObject.getFullYear();
-            if ($('#quick-quote-form .input-date').val() === 0 ||
-                $('#quick-quote-form .input-date').val() < date) {
+            
+            
+            if (currdate.setHours(0,0,0,0) < dateObject.setHours(0,0,0,0) || $('#top-form .input-date').val() == 0) {
                 return {
-                    element: $('#quick-quote-form-date'),
+                    element: $('#date'),
                     message: 'Please set correct date'
                 }
             } 
         }
     });
+
+
+    $('#from, #to, #size, #date').on('validation',function(evt, valid) {
+        if($(this).has('error')) {
+            console.log(1)
+        }
+    });
+
+
     $.validate({
         form: '#quick-quote-form-popup',
         validateOnBlur: false,
         scrollToTopOnError: false,
         onValidate: function($form) {
-            
+
             var dateObject = new Date();
             var date = dateObject.getDate() + "." + 0 + (dateObject.getMonth() + 1) + "." + dateObject.getFullYear() ;
             if ($('#quick-quote-form-popup .input-date').val() === 0 ||
@@ -217,6 +170,9 @@ $(document).ready(function() {
                     message: 'Please set correct date'
                 }
             }
+            
+            
+
         }
     });
     // form validation
@@ -316,32 +272,32 @@ $(document).ready(function() {
 
 });
 
-$(window).scroll(startCounter);
+// $(window).scroll(startCounter);
 
 
 
-function startCounter() {
-    var hT = $('.data-item .text span').offset().top,
-        hH = $('.data-item .text span').outerHeight(),
-        wH = $(window).height();
-    if ($(window).scrollTop() > hT + hH - wH) {
-        $(window).off("scroll", startCounter);
-        $('.data-item .text span').each(function() {
-            var $this = $(this);
-            jQuery({
-                Counter: 0
-            }).animate({
-                Counter: $this.text()
-            }, {
-                duration: 3000,
-                easing: 'swing',
-                step: function() {
-                    $this.text(Math.ceil(this.Counter));
-                }
-            });
-        });
-    }
-}
+// function startCounter() {
+//     var hT = $('.data-item .text span').offset().top,
+//         hH = $('.data-item .text span').outerHeight(),
+//         wH = $(window).height();
+//     if ($(window).scrollTop() > hT + hH - wH) {
+//         $(window).off("scroll", startCounter);
+//         $('.data-item .text span').each(function() {
+//             var $this = $(this);
+//             jQuery({
+//                 Counter: 0
+//             }).animate({
+//                 Counter: $this.text()
+//             }, {
+//                 duration: 3000,
+//                 easing: 'swing',
+//                 step: function() {
+//                     $this.text(Math.ceil(this.Counter));
+//                 }
+//             });
+//         });
+//     }
+// }
 
 // function initMap() {
 //     // Create a map object and specify the DOM element for display.

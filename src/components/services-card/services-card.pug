@@ -1,0 +1,10 @@
+-var data = [{img:'./images/1.png',title:'LABOR, LOADING OR UNLOADING',text:'We provide full packing and unpacking services, because safety of your belongings is most important thing during the move'},{img:'./images/2.png',title:'Lorem ipsum',text:'Lorem ipsum Ut pariatur anim id dolor elit non laboris commodo cillum consequat.'},{img:'./images/3.png',title:'Lorem ipsum',text:'Lorem ipsum Ut pariatur anim id dolor elit non laboris commodo cillum consequat.'},{img:'./images/4.png',title:'Lorem ipsum',text:'Lorem ipsum Ut pariatur anim id dolor elit non laboris commodo cillum consequat.'}]
+
+each el, i in data
+    +b.services-card
+        +b.img-wrapper
+            +e.IMG(src=el.img).img
+        +b.text
+            +e.H2.title=el.title
+            +e.P.content=el.text
+        

@@ -9,29 +9,28 @@
         vertical-align sub
         font-size 14px
         text-decoration none
-        color #272c66
+        color $blue
         text-transform uppercase
         text-align center
         &:hover
-            color #25a937
+            color #da251c
         & + .nav__el
             margin-left 15px
-        &--active
-            color #25a937
+        
 @media(max-width 1199px)
     .nav
         float none
-        margin-top 7px
+        margin-top 0px
         text-align center
-        width 100%
-        display block
+        width auto
+        
         &__el
             display inline-block
             margin 0 10px
             & + & + .nav__el
                 margin 0 10px
         
-@media(max-width 720px)
+@media(max-width 960px)
     .nav
         display none
         &__el
@@ -43,6 +42,7 @@
             &:hover
                 color #474747
         &--left
+            margin 0
             transition .2s linear all
             position fixed
             padding 40px 31px
@@ -50,7 +50,7 @@
             top 0
             height 100%
             left -215px
-            background-color #25a937
+            background-color $blue
             width 215px
             text-align left
             display block

@@ -1,0 +1,81 @@
+-var data = [{title:'pay less',className:'less',popup:'#quick-quote-form-popup'},{title:'pay more', className:'more',popup:'#small-thanks'}]
+-var td = [{title:'Gas fee',cost:'$0'},{title:'Truck fee',cost:'$0'},{title:'Stairs fee',cost:'$0'},{title:'Two shrink wrap rolls',cost:'$0'},{title:'Two masking tape',cost:'$0'},{title:'Five plastic bags',cost:'$0'},{title:'Packing paper',cost:'$0'}]
+
+each el, i in data
+    +b.reason-item(class="reason-item--"+el.className)
+        +b.img-wrapper
+            +e.IMG(src="./images/logo.png").img
+        +b.SPAN.cost-p-hour Pay $55 <br>per hour
+        +b.TABLE.table
+                each el, i in td
+                    +b.TR.table-row
+                        +e.TD.first(data-td=td[i].title)=el.title
+                        +e.TD.last=el.cost
+
+        +b.P.total-info total bill = 
+            +e.SPAN.total $300
+        +b.P.conclusion 
+            +e.SPAN.styled $180 economy 
+            +e.SPAN than Pure Moving
+
+
+        +b.A(href=el.popup, class="badge--"+el.className).badge #{el.title}
+
+.container#quick-quote-form-popup.zoom-anim-dialog.mfp-hide
+    +b.FORM(action="").quick-quote-form-popup.clearfix
+        h2.title Moving never<br> can't be more easy!
+        p.subtitle Quick quote
+        +e.dismiss &times;
+        .wrapper
+            +b.left-side
+                +b.form-control
+                    +e.INPUT(type="text" placeholder="Full name" data-validation="custom length" data-validation-regexp="^([A-Za-z_ ]+)$" data-validation-length="min1" data-validation-error-msg="Invalid value" name="").input
+                +b.form-control
+                    +e.INPUT(type="email" placeholder="E-mail"  data-validation="email" data-validation-error-msg="Enter email in xx@xx.xx format" ).input
+                +b.form-control
+                    +e.INPUT(  name="phone" data-validation="length number" data-validation-length="10-10" data-validation-error-msg="Phone number is not correct" placeholder="Phone number" type="text" onfocus="$(this).attr('type','number')").input.phone-number
+                +b.form-control
+                    +b.SELECT.select(data-validation="length" data-validation-length="min1" data-validation-error-msg="This field is required")
+                        +e.OPTION.el(data-index="0" value="") How did you know about us?
+                        +e.OPTION.el(data-index="1" value="1") Studio
+                        +e.OPTION.el(data-index="2" value="2") 1 bedroom
+                        +e.OPTION.el(data-index="3" value="3") 2 bedroom(small size,few items)
+                        +e.OPTION.el(data-index="4" value="4") 2 bedroom(avg. size, avg. items)
+                        +e.OPTION.el(data-index="5" value="5") 2 bedroom(large, many items)
+                        +e.OPTION.el(data-index="6" value="6") 3 bedroom(avg. size, avg. items)
+                        +e.OPTION.el(data-index="7" value="7") 3 bedroom(large, many items)
+                        +e.OPTION.el(data-index="8" value="8") 4 bedroom(avg. size, avg. items)
+                        +e.OPTION.el(data-index="9" value="9") 4 bedroom(large, many items)
+                        +e.OPTION.el(data-index="10" value="10") Commercial(avg. size, avg. items)
+                        +e.OPTION.el(data-index="11" value="last") Commercial(large, many items)    
+            +b.center
+                +b.form-control
+                    +e.INPUT( id="popup-date" type="text"  placeholder="Moving Date" data-validation-format="yyyy/mm/dd").input.input-date
+                +b.form-control
+                    +e.INPUT(  data-validation="alphanumeric length" data-validation-length="min1" data-validation-error-msg="Invalid zip code" placeholder="Pick up zip" type="text").input.input-zip
+                +b.form-control
+                    +e.INPUT(  data-validation="alphanumeric length" data-validation-length="min1"  data-validation-error-msg="Invalid zip code"  placeholder="Drop off zip" type="text").input.input-zip 
+                +b.form-control
+                    +b.SELECT.select(data-validation="length" data-validation-length="min1" data-validation-error-msg="This field is required")
+                        +e.OPTION.el(data-index="0" value="") Select move size
+                        +e.OPTION.el(data-index="1" value="1") Studio
+                        +e.OPTION.el(data-index="2" value="2") 1 bedroom
+                        +e.OPTION.el(data-index="3" value="3") 2 bedroom(small size,few items)
+                        +e.OPTION.el(data-index="4" value="4") 2 bedroom(avg. size, avg. items)
+                        +e.OPTION.el(data-index="5" value="5") 2 bedroom(large, many items)
+                        +e.OPTION.el(data-index="6" value="6") 3 bedroom(avg. size, avg. items)
+                        +e.OPTION.el(data-index="7" value="7") 3 bedroom(large, many items)
+                        +e.OPTION.el(data-index="8" value="8") 4 bedroom(avg. size, avg. items)
+                        +e.OPTION.el(data-index="9" value="") 4 bedroom(large, many items)
+                        +e.OPTION.el(data-index="10" value="") Commercial(avg. size, avg. items)
+                        +e.OPTION.el(data-index="11" value="last") Commercial(large, many items)
+            .right-side
+                +b.form-control.textarea
+                    +e.TEXTAREA.input.message(placeholder="Please let us know if you need help with packing or if you have any heavy items over 200lbs" data-validation="length" data-validation-length="min1" data-validation-error-msg="Message must not be empty")
+                +b.input-group.clearfix
+                    +b.INPUT(type="submit" value="GET A QUOTE NOW").form-submit
+                    +b.INPUT(type="button" value="MORE DETAILS").form-more 
+        +b.dialog.zoom-anim-dialog.mfp-hide
+            +e.H1.el Thank you! Our manager will contact you as soon as possible!
++b.dialog#small-thanks.zoom-anim-dialog.mfp-hide
+    +e.H1.el Thank you! Our manager will contact you as soon as possible!

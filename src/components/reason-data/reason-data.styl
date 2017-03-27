@@ -1,0 +1,132 @@
+.datepickers-container
+    z-index 1123
+#quick-quote-form-popup
+    background-color rgba(37,169,55,.85)
+    // @extends .quick-quote-form
+    .quick-quote-form-popup
+        padding-top 20px
+        &__dismiss
+            display none
+        .right-side
+            .input-group
+                .form-submit
+                    float right
+                    margin-top -3px
+     
+.reason-item
+    font-family TitilliumWeb-Regular
+    background url('../images/reason-card.png') no-repeat center center
+    width  480px
+    background-size 100% 100%
+    display inline-block
+    margin 20px
+    padding 41px 0 80px
+    position relative
+    &--less
+        .cost-p-hour, .total-info
+            color $blue
+        .badge
+            background-color #1b952c
+            &:hover
+                background-color #0aaf21
+    &--more
+        .cost-p-hour, .total-info
+            color $red
+        .total-info
+            margin-bottom 20px 
+        .badge
+            background-color #ff3030
+            &:hover
+                background-color rgba(251,20,20,1)
+        .conclusion
+            display none !important
+    .badge
+        text-decoration none
+        position absolute
+        bottom  -0px
+        left 50%
+        transform translateX(-50%)
+        width 191px
+        padding 14px 0
+        text-transform uppercase
+        color #fff
+        box-shadow 0px 8px 26.1px 2.9px rgba(0, 0, 0, 0.33)
+        border-radius 5px
+        font-size 15px
+        font-family TitilliumWeb-Regular
+    .img-wrapper
+        display inline-block
+        margin-top 20px
+        margin-right 30px
+        width 129px
+        &__img
+            display block
+            width 100%
+    .cost-p-hour
+        display inline-block
+        vertical-align top
+        font-family TitilliumWeb-Bold
+        
+        font-size 18px
+        text-transform uppercase
+        margin-left 30px
+        text-align left
+    .table
+        text-align left
+        width 285px
+        margin 41px  auto 20px
+        border-spacing 0px
+        border-collapse collapse
+        .table-row
+            margin 10px 0
+            &:nth-child(odd)
+                background-color #e1e1e1
+            td
+                padding 5px 
+                
+            &__first
+                font-family TitilliumWeb-Regular
+                font-size 14px
+                color #272c66
+            &__last
+                font-size 14px
+                font-family TitilliumWeb-Regular
+                color #272c66
+                padding 0 !important
+    .total-info
+        text-transform uppercase
+        
+        font-family TitilliumWeb-Bold
+        font-size 32px
+    .conclusion
+        font-size 15.73px
+        font-family TitilliumWeb-Regular
+        text-transform uppercase
+        color #272c66
+        &__styled
+            font-family TitilliumWeb-Regular
+#small-thanks
+    .mfp-close
+        color #000 !important
+        
+
+@media(max-width 720px)
+    .reason-item
+        width 100%
+        margin-left -20px
+        margin-right -20px
+        .img-wrapper
+            margin-right 10px
+        .cost-p-hour
+            margin-left 10px
+        .table
+            width 80%
+        .total-info
+            font-size 1.5em
+        .conclusion
+            font-size .8em
+@media(max-width 380px)
+    .reason-item
+        width 100%
+        
+            

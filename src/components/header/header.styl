@@ -1,6 +1,6 @@
 @import '../nav/nav'
 .header
-    color #272c66
+    color $blue
     position fixed 
     top 0
     left 0
@@ -8,7 +8,7 @@
     z-index 555
     background-color #fff
     box-sizing border-box
-    transiztion .5s linear height
+    transition .5s linear height
     &--tiny
         height 40px
         .container
@@ -17,7 +17,7 @@
             width 80px
         .phone-wrap
             margin-top -20px
-            // background url('../images/phone.png') no-repeat left 40%
+            // background url('.../images/phone.png') no-repeat left 40%
             &__time-open
                 display none !important
         
@@ -41,28 +41,38 @@
         &__img
             max-width 100%
     .email-wrap
+        font-family TitilliumWeb-Bold
+        font-size 14px
+        margin-left 65px
         display inline-block
+        vertical-align middle
+        margin-top 10px
         &__phone
+            margin-top 7px
             text-decoration none
             display block
             font-size 15px
+            font-family TitilliumWeb-Regular
+            color $blue
             &:hover 
                 text-decoration underline
     .phone-wrap
-        padding-left 25px
-        // background url('../images/phone.png') no-repeat left 20%
+        // background url('.../images/phone.png') no-repeat left 20%
+        margin-top 5px
         background-size 10px 20px
-        font-size 23px
-        margin-left 111px
+        float right
         text-align center
         &__phone
-            color #000
+            font-family TitilliumWeb-Bold
+            color  #da251c
             text-decoration none
+            font-size 25px
             &:hover
                 opacity .75
         &__time-open
             display block
-            font-size 11px
+            font-size 15px
+            
             
             
     .phone-xs-visible, .menu-toggle
@@ -70,31 +80,40 @@
 
 @media(max-width 1199px)
     .header
-        text-align justify
+        text-align center
         &:after
             width 100%
             left 0
         .container
-            padding-left 0
-            padding-right 0
-            padding-bottom 30px
+            padding 10px 0 10px
+        .logo
+            float left
         .logo, .phone-wrap
             margin-right 0px
-        .phone-wrap
+        .phone-wrap, .email-wrap
             display none
-        .logo
-            width 80px
-            float left
         .phone-xs-visible
+            margin-top -3px
             display block
             float right
+            width 40px
+            height 40px
+            border-radius 7px
+            background-color #da251c
+            text-align center
+            line-height 43px
+            &:hover
+                background-color #f30b00
             &__el
+                text-decoration none
+                color #fff
+                font-size 20px
                 display block
                 height 100%
                 
             
                     
-@media(max-width 720px)
+@media(max-width 960px)
     .header
         &:after
             visibility visible
@@ -114,17 +133,18 @@
                 height 2px
                 bottom -2px
         .menu-toggle
+            border-radius 7px
+            background-color $blue
             width 40px 
             height 40px
             display block
             float left
             cursor pointer
-            
-            // background url('../images/menu-open.png') no-repeat center center
+            margin-top -3px
+            color #fff
+            line-height 40px
             &:hover
                 opacity .75
-            &--active
-                // background url('../images/menu-close.png') no-repeat center center
         .logo
             float none
         

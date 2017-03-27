@@ -75,7 +75,7 @@ gulp.task('indexTemplate', function() {
       pretty: true,
       basedir: 'src'
     }))
-    .pipe(gulp.dest('wp-content/themes/safederal/'))
+    .pipe(gulp.dest('wp-content/themes/safederal'))
 });
 
 gulp.task('styles-watch', ['styles'], reload);
@@ -83,7 +83,7 @@ gulp.task('styles-watch', ['styles'], reload);
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: 'wp-content/themes/safederal/',
+            baseDir: 'wp-content/themes/safederal',
             open: false
         },
     })

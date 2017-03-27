@@ -1,0 +1,9 @@
+-var data = [{title:'Great Customer Service', content:'Lorem ipsum Proident in anim non adipisicing exercitation esse Duis Ut sint.', className:'icon-check'},{title:'Close-Knit Team', content:'Lorem ipsum Proident in anim non adipisicing exercitation esse Duis Ut sint.', className:'icon-team'},{title:'No Hidden Fees', content:'Lorem ipsum Proident in anim non adipisicing exercitation esse Duis Ut sint.', className:'icon-percent'},{title:'Lowest Rates & Billiny', content:'Lorem ipsum Proident in anim non adipisicing exercitation esse Duis Ut sint.', className:'icon-dollar'},{title:'Insurance & Licence', content:'Lorem ipsum Proident in anim non adipisicing exercitation esse Duis Ut sint.', className:'icon-insurance'},{title:'Accepting Any Credit Card', content:'Lorem ipsum Proident in anim non adipisicing exercitation esse Duis Ut sint.', className:'icon-credit'}]
+each el, i in data
+    +b.reasons-card.clearfix
+        +b.img-wrapper
+            +e.icon(class=el.className)
+        +b.text
+            +e.H2.title=el.title
+            +e.P.content=el.content
+
