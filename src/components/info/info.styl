@@ -1,0 +1,24 @@
+.info
+    padding-bottom 40px
+    &__title
+        text-align center
+        text-transform uppercase
+        color $blue
+        font-size 30px
+        font-family TitilliumWeb-Bold
+        margin-bottom 60px
+        &--styled
+            color $red
+    .legend
+        margin-top 68px
+        &__paragraph
+            color $blue
+            margin-bottom 20px
+@media(max-width 960px)
+    .info
+        .legend
+            &__paragraph
+                text-align justify
+                padding 0 5px
+            
+@import '../info-slider/info-slider'

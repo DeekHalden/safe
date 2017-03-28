@@ -108,23 +108,45 @@ $(document).ready(function() {
         $(this).toggleClass('faq__qw-bold');
     });
 
-    $('.form-slider').slick({
+    // $('.form-slider').slick({
+    //     speed: 1500,
+    //     infinite: false,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     responsive: [
+    //         // You can unslick at a given breakpoint now by adding:
+    //         // settings: "unslick"
+    //         // instead of a settings object
+    //     ]
+    // });
+
+    $('#info-slider').slick({
         speed: 1500,
         infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        responsive: [{
-                breakpoint: 1199,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 960,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true
+                    slidesToScroll:2,
+                    slidesToShow:2,
                 }
+
+            },
+            {
+                breakpoint: 720,
+                settings: {
+                    slidesToScroll:1,
+                    slidesToShow:1,
+                }
+
             }
+        ]
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
-        ]
     });
     // form validation
     $('.input-date').datepicker();
@@ -147,11 +169,25 @@ $(document).ready(function() {
         }
     });
 
+    $('.action-btn').click(function() {
+        $('#first-step .form-control').each(function(index, el) {
 
-    $('#from, #to, #size, #date').on('validation',function(evt, valid) {
-        if($(this).has('error')) {
-            console.log(1)
-        }
+            console.log(el[index].classList.contains('error') == true);
+        });
+    })
+    // $('#first-step .form-control, #second-step .form-control').on('validation',function(evt, valid) {
+        
+        // setTimeout(function() {
+        //   console.log(els.classList.contains('valid'));  
+        // })
+        // if($(this).hasClass('error')) {
+        //     console.log($(this));
+        // } else {
+        //     $('.action-btn').on('click',function(e) {
+        //         e.preventDefault();
+        //         $('.slick-next').trigger('click');
+        //     })
+        // }
     });
 
 
@@ -270,7 +306,7 @@ $(document).ready(function() {
         }
     }
 
-});
+
 
 // $(window).scroll(startCounter);
 

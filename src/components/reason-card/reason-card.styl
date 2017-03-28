@@ -2,6 +2,7 @@
     width 48%
     float left
     margin-bottom 41px
+    background rgba(255,255,255,.8)
     &:hover .img-wrapper
         background-color $blue
     &:hover .text__title
@@ -36,5 +37,18 @@
             height 40px
             color $blue
             font-family TitilliumWeb-Light
+@media(max-width 720px)
+    .reasons-card
+        .text
+            &__content
+                height 80px
+                text-align justify
+@media(max-width 480px)
+    .reasons-card
+        width 100%
+        .text
+            &__content
+                height 80px
+                text-align justify
             
             

@@ -1,0 +1,51 @@
+.slider
+    .slick-list
+        margin 0 30px
+    .slick-next, .slick-prev
+        font-size 0
+        position absolute
+        top 40%
+        top calc(50% - 21.5px)
+        z-index 10
+        background-color transparent
+        border none
+        height 30px
+        width 30px
+        cursor pointer
+        &:focus
+            outline none
+        &:hover
+            opacity .5
+    .slick-prev
+        left 0px
+        background url('../images/left.png') no-repeat center center
+    
+    .slick-next
+        right 0px
+        background url('../images/right.png') no-repeat center center
+        
+    .img-wrapper
+        width 365px 
+        overflow hidden
+        height 100%
+        cursor grab
+        &:nth-child(2n + 2)
+            margin 0 16px
+        &__img
+            position relative
+            left 50%
+            transform translateX(-50%)
+            width 100%
+            height auto
+@media(max-width 1199px)
+    .slider
+        .img-wrapper
+            width 290px
+@media(max-width 960px)
+    .slider
+        .img-wrapper
+            width 330px
+@media(max-width 720px)
+    .slider
+        .img-wrapper
+            width 400px
