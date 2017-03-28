@@ -1,0 +1,116 @@
+.feedback-slider
+    height 500px
+    margin-bottom 200px
+    padding 0 15px
+    .slick-next 
+        @extends .info-slider .slick-next
+        right -2px
+    .slick-prev 
+        @extends .info-slider .slick-prev
+    .item
+        width 370px
+        background-color #fff
+        margin 25px 15px
+        border 1px solid transparent
+        border-radius 5px
+        cursor grab
+        // .item-header
+        .item-header
+            padding 10px 23px
+        .content
+            padding 31px 23px
+            background url('../images/box-shadow.png') no-repeat center top
+            .img-wrapper
+                float left
+                width 80px
+                height 80px
+            .pers-info
+                float left
+                margin-left 15px
+                width calc(100% - 100px)
+                color $blue
+                &__name
+                    font-size 17px
+                    font-family TitilliumWeb-Bold
+                    text-transform uppercase
+                    margin-bottom 11px
+                &__date
+                    font-size 15px
+                    font-family TitilliumWeb-Light
+                .rating
+                    &__star
+                        display inline-block
+                        margin 0 1px
+                        
+                // &__rating
+                    
+            .text 
+                clear both
+                color $blue
+                font-size 16px
+                height 100px
+                overflow hidden
+                &--active
+                    height 100%
+            .learn-more
+                color $red
+                visibility hidden
+                font-family TitilliumWeb-Bold
+                cursor pointer
+                &:hover
+                    color orange
+                &--visible
+                    visibility visible
+                &--active
+                    color $blue
+                    &:hover
+                        color blue
+                &:focus
+                    outline none
+        .item-footer
+            padding 11px 23px
+            .title
+                color $blue
+                font-family TitilliumWeb-Bold
+                font-size 16px
+                &--styled
+                    font-family TitilliumWeb-Light
+        
+@media(max-width 1199px)
+    .feedback-slider
+        .item
+            .content
+                .pers-info
+                    &__name
+                        font-size 12px
+                .text
+                    &__content
+                        text-align justify
+        
+        
+@media(max-width 960px)
+    .feedback-slider
+        .slick-next 
+            right 116px
+        .slick-prev 
+            left 116px
+        .item
+            // width 400px !important
+            margin-left 150px
+            margin-right 150px
+@media(max-width 720px)
+    .feedback-slider
+        .slick-next 
+            right 7px
+        .slick-prev 
+            left 7px
+        .item
+            // width 400px !important
+            margin-left 40px
+            margin-right 40px
+@media(max-width 480px)
+    .feedback-slider
+        .item
+            width 300px
+            margin-left 0
+            margin-right 0

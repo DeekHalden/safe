@@ -76,7 +76,7 @@
 {
     display: none;
     float: left;
-
+    transition: .2s linear all;
     height: 100%;
     min-height: 1px;
 }
@@ -110,4 +110,8 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+.slick-center {
+    transition: .2s linear all;
+    transform: scale(1.1);
 }

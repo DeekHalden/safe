@@ -1,25 +1,26 @@
 $(document).ready(function() {
 
 
-    var paragraph = $('.about .item .review__paragraph');
-    paragraph.each(function(i) {
-            
-            if ($(this).height() > 237) {
-                $(this).parent().parent().find('.learn-more').toggle();
-            }
-        })
-    $('.item .learn-more').on('click', function() {
-        var text = 'Show more'
-        $(this).toggleClass('learn-more--active');
-        if ($(this).hasClass('learn-more--active')) {
-            $(this).text('Show less');
-        } else {
-            $(this).text(text);
-        }
-        var parent = $(this).parent();
-        parent.toggleClass('item--active');
-        parent.find('.review').toggleClass('review--active');
-    })
+    // var paragraph = $('.feedback-slider .item .content .text__content');
+    // paragraph.each(function(i) {
+    //         console.log(i);
+    //         if ($(this).height() > 70) {
+    //             $(this).parent().parent().find('.learn-more').toggle();
+    //         }
+    //     })
+    // $('.item .learn-more').on('click', function(e) {
+    //     e.preventDefault();
+    //     var text = 'show more';
+    //     $(this).toggleClass('learn-more--active');
+    //     if ($(this).hasClass('learn-more--active')) {
+    //         $(this).text('show less');
+    //     } else {
+    //         $(this).text(text);
+    //     }
+    //     var parent = $(this).parent();
+    //     parent.toggleClass('item--active');
+    //     parent.find('.review').toggleClass('review--active');
+    // })
 
 
     var wrapper = document.getElementsByClassName('wrapper')[0];
@@ -147,6 +148,47 @@ $(document).ready(function() {
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
+    });
+
+
+    var paragraph = $('.feedback-slider .item .content .text__content');
+    paragraph.each(function(i) {
+
+        if ($(this).height() > 70) {
+            $(this).parent().parent().find('.learn-more').toggleClass('learn-more--visible');
+        }
+    });
+
+     $('.item .learn-more').on('click', function() {
+        var text = 'show more'
+        $(this).toggleClass('learn-more--active');
+        if ($(this).hasClass('learn-more--active')) {
+            $(this).text('show less');
+        } else {
+            $(this).text(text);
+        }
+        var parent = $(this).parent();
+        parent.toggleClass('item--active');
+        parent.find('.text').toggleClass('text--active');
+    })
+
+    $("#feedback-slider").slick({
+        speed: 1500,
+        centerPadding: '0',
+        slidesToShow: 3,
+        infinite: true,
+        centerMode:true,
+        responsive: [
+            {
+                breakpoint: 960,
+                settings: {
+                    slidesToShow:1
+
+                }
+
+            }
+        ]
+
     });
     // form validation
     $('.input-date').datepicker();
