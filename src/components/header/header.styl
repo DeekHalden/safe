@@ -34,16 +34,19 @@
             visibility visible
             position absolute
             content ''
-            bottom -8px
+            bottom -4px
             left 0
-            height 8px
+            height 4px
             width 100%
-            background-color #25a937
+            background-color $blue
     .logo, .phone-wrap
         display inline-block
         vertical-align middle
     .logo
-        margin-right 29px
+            
+        margin-right 55px
+        &:hover
+            opacity .7
         &__img
             max-width 100%
     .email-wrap
@@ -91,7 +94,7 @@
             width 100%
             left 0
         .container
-            padding 10px 0 10px
+            padding 15px 0 
         .logo
             float left
         .logo, .phone-wrap
@@ -99,6 +102,7 @@
         .phone-wrap, .email-wrap
             display none
         .phone-xs-visible
+            
             margin-top -3px
             display block
             float right
@@ -116,6 +120,8 @@
                 font-size 20px
                 display block
                 height 100%
+                &:focus
+                    outline none
                 
             
                     
@@ -129,7 +135,7 @@
             left 0
             height 2px
             width 100%
-            background-color #25a937
+            background-color $blue
         .container 
             text-align center
             padding 10px 0 
@@ -159,6 +165,9 @@
         text-align center
         .phone-wrap
             display none
+        .logo
+            width 150px
+            margin-top 5px
 
     
 @media(max-width 420px)

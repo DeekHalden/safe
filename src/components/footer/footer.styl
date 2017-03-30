@@ -1,13 +1,14 @@
 .footer-wrapper
-    background-color  #2a3f48
+    background-color  #fff
     overflow hidden
     .footer
         position relative
         padding 33px 0 10px
-        color #fff
-        .logo-wrapper, .info-wrap
+        color $blue
+        .logo, .info-wrap
             display inline-block
-        .logo-wrapper
+        .logo
+            
             float left
             &__copyright
                 margin-top 25px
@@ -15,16 +16,20 @@
                 vertical-align bottom
                 display block
                 font-size 11px
+            &:hover 
+                opacity .7
         .info-wrap
             margin-top -5px
             margin-left 330px
             vertical-align top
             text-align center
+            font-family TitilliumWeb-Light
             &__phone
+                font-family TitilliumWeb-Bold
                 text-align center
                 text-decoration none
                 display block
-                color #fff
+                color $red
                 font-size 20px
                 .img
                     height 23px
@@ -35,6 +40,7 @@
                 &:hover
                     opacity .75
             &__time-open
+                font-family TitilliumWeb-Bold
                 margin-top 0px
                 display inline-block
                 width 100%
@@ -46,12 +52,12 @@
                 margin-top 25px
                 display block
                 text-decoration none
-                color #fff
+                color $blue
                 &:hover
                     opacity .75
         .socials
             position relative
-            right -24px
+            right -40px
             float right
             width 240px
             font-size 13px
@@ -65,15 +71,15 @@
                 margin-left 5px
                 &__icon
                     font-size 13px
-                    color #25a937
+                    color $red
                 &__link
                     height 13px
                     margin-left 10px
                     display inline-block
                     text-decoration none
-                    color #fff
+                    color $blue
                     &:hover
-                        color #25a937
+                        color $red
         
         .developed-by
             display inline-block
@@ -81,16 +87,16 @@
             bottom 10px
             right 0
             clear both
-            &:hover
-                opacity .75
-            .href
-                text-decoration none
-                color #fff
+            .text
+                display inline-block
+                color $blue
+                .href
+                    text-decoration none
+                    &:hover
+                        opacity .75
                 &__img
                     display inline-block
                     margin-right 10px
-                &__text
-                    display inline-block
                 
 @media(max-width 1199px)
     .footer-wrapper
@@ -116,7 +122,7 @@
     .footer-wrapper
         .footer
             .info-wrap
-                margin-left 104px
+                margin-left 70px
             .socials
                 margin-left 0
             .footer-nav
@@ -125,13 +131,11 @@
     .footer-wrapper
         .footer
             padding 30px 0
-            .logo-wrapper
+            .logo
                 width 100px
                 .img-wrapper
                     &__img
                         width 100%
-                &__copyright
-                    display none
             .info-wrap
                 float right
                 margin-left 0

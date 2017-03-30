@@ -113,5 +113,5 @@
 }
 .slick-center {
     transition: .2s linear all;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }

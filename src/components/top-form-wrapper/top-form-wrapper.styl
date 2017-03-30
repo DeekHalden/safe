@@ -1,6 +1,6 @@
 @import '../top-form/top-form'
 .top-form-container
-    margin-top 115px
+    margin-top 110px
     background #fff url('../images/couple.png') no-repeat center
     background-size cover
     padding 104px 0 200px
@@ -14,8 +14,25 @@
                 font-size 60px
                 color $red
             &__slogan
-                wi
+                width 50%
                 font-size 26px
+                line-height 32px
                 color $blue
-    //     &__
-        
+@media(max-width 1199px)        
+    .top-form-container
+        margin-top 30px
+        background #fff url('../images/couple-nomask.png') no-repeat center center
+        background-size cover
+        padding 30px 0 100px
+        .top-form-wrapper
+            text-align center
+            .text
+                width 100%
+                margin 0px auto 20px
+                float none
+                &__title
+                    font-size 40px
+                    text-shadow 0 1px $blue
+                &__slogan
+                    text-shadow 0 1px #fff
+                    width  100%

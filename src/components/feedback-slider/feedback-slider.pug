@@ -1,4 +1,4 @@
--var data = [{headerImg:'../images/yelp.png', img:'../images/lizette.png',name:'Lizette Cadrow', date:'29.03.2017', content:['Lorem ipsum Culpa velit cillum do eiusmod pariatur sit dolor labore velit Duis cillum dolore.']},{headerImg:'../images/yelp.png', img:'../images/lizette.png',name:'Lizette Cadrow', date:'29.03.2017', content:['Lorem ipsum Culpa velit cillum do eiusmod pariatur sit dolor labore velit Duis cillum dolore consequat Ut magna nulla nostrud.','Lorem ipsum Laboris proident voluptate aliquip non laboris sed incididunt amet eiusmod minim laboris amet ea et id consectetur dolore occaecat Excepteur cillum esse mollit minim consectetur ullamco veniam ex sunt esse ea aliquip culpa est adipisicing ut.','Lorem ipsum Dolore cupidatat culpa consectetur quis laborum pariatur exercitation exercitation in do aute do ut dolore.']},{headerImg:'../images/yelp.png', img:'../images/lizette.png',name:'Lizette Cadrow', date:'29.03.2017', content:['Lorem ipsum Culpa velit cillum do eiusmod pariatur sit dolor labore velit Duis cillum dolore consequat Ut magna nulla nostrud.','Lorem ipsum Laboris proident voluptate aliquip non laboris sed incididunt amet eiusmod minim laboris amet ea et id consectetur dolore occaecat Excepteur cillum esse mollit minim consectetur ullamco veniam ex sunt esse ea aliquip culpa est adipisicing ut.','Lorem ipsum Dolore cupidatat culpa consectetur quis laborum pariatur exercitation exercitation in do aute do ut dolore.']}]
+-var data = [{headerImg:'./images/yelp.png', img:'./images/lizette.png',name:'Lizette Cadrow', date:'29.03.2017', content:['Lorem ipsum Culpa velit cillum do eiusmod pariatur sit dolor labore velit Duis cillum dolore.']},{headerImg:'./images/yelp.png', img:'./images/lizette.png',name:'Lizette Cadrow', date:'29.03.2017', content:['Lorem ipsum Culpa velit cillum do eiusmod pariatur sit dolor labore velit Duis cillum dolore consequat Ut magna nulla nostrud.','Lorem ipsum Laboris proident voluptate aliquip non laboris sed incididunt amet eiusmod minim laboris amet ea et id consectetur dolore occaecat Excepteur cillum esse mollit minim consectetur ullamco veniam ex sunt esse ea aliquip culpa est adipisicing ut.','Lorem ipsum Dolore cupidatat culpa consectetur quis laborum pariatur exercitation exercitation in do aute do ut dolore.']},{headerImg:'./images/yelp.png', img:'./images/lizette.png',name:'Lizette Cadrow', date:'29.03.2017', content:['Lorem ipsum Culpa velit cillum do eiusmod pariatur sit dolor labore velit Duis cillum dolore consequat Ut magna nulla nostrud.','Lorem ipsum Laboris proident voluptate aliquip non laboris sed incididunt amet eiusmod minim laboris amet ea et id consectetur dolore occaecat Excepteur cillum esse mollit minim consectetur ullamco veniam ex sunt esse ea aliquip culpa est adipisicing ut.','Lorem ipsum Dolore cupidatat culpa consectetur quis laborum pariatur exercitation exercitation in do aute do ut dolore.']}]
 -var i = 0
 #feedback-slider.feedback-slider.center.container.clearfix
     while i < 3
@@ -6,24 +6,24 @@
             +b.item(id=i)
                 +b.item-header
                     +b.img-wrapper
-                        +e.IMG(src=el.headerImg)
+                        +e.IMG(src=el.headerImg).img
 
                 +b.content.clearfix
                     +b.img-wrapper
-                        +e.IMG(src=el.img)
+                        +e.IMG(src=el.img).img
                     +b.pers-info
                         +e.name=el.name
                         +e.date=el.date
                         +b.rating
-                            +e.IMG(src="../images/star.png").star
-                            +e.IMG(src="../images/star.png").star
-                            +e.IMG(src="../images/star.png").star
-                            +e.IMG(src="../images/star.png").star
-                            +e.IMG(src="../images/star.png").star
+                            +e.IMG(src="./images/star.png").star
+                            +e.IMG(src="./images/star.png").star
+                            +e.IMG(src="./images/star.png").star
+                            +e.IMG(src="./images/star.png").star
+                            +e.IMG(src="./images/star.png").star
                     +b.text
                         each element, index in el.content
                             +e.P.content=element
-                    +b.A().learn-more show more
+                    +b.A().learn-more Read more
                 +b.item-footer
                     +b.H2.title Safederal / 
                         span.title--styled Los Angeles

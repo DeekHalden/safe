@@ -56,6 +56,10 @@ a[href^="http://maps.google.com/maps"]
 a[href^="https://maps.google.com/maps"] 
     display none !important
 
+a, img, div, input
+    &:active, &:focus
+        outline none
+
 .gmnoprint a, .gmnoprint span, .gm-style-cc  
     display none
 

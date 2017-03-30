@@ -1,0 +1,20 @@
+
+.container.form-container.clearfix
+  +b.FORM.stay-in-touch#stay-in-touch(method="get" action="")
+    +b.FIELDSET.fieldset
+      +e.H2.title Keep in Touch
+      +e.H3.subtitle If you have any question, please contact us
+      +b.form-control
+        +e.LABEL.label(for="stayname") Name
+        +e.INPUT.form-input(id="stayname" name="name" minlength="2" type="text")
+      +b.form-control
+        +e.LABEL.label(for="staycontact") Email / Phone
+        +e.INPUT.form-input(id="staycontact" type="text" name="staycontact" required)
+      +b.form-control.form-control--textarea
+        +e.LABEL.label(for="stayquestion") Your question
+        +e.TEXTAREA.form-input(id="stayquestion" name="stayquestion")
+      +b.form-control.clearfix
+        +e.INPUT.form-submit(class="submit" type="submit" value="Ask the question")
+
+      
+  

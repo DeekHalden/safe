@@ -1,0 +1,20 @@
+-var i = 0
+#faq.faq.container
+    .wrapper-inner
+        .faq__content
+            .naming Frequently Asked Questions
+            while i < 8
+                .faq__block.clearfix
+                    
+                    .faq__qw What type and size of moves does NJ local moving do? Do you do dull service moving and packing?
+                        +b.SPAN.icon-toggle-wrapper 
+                            +e.SPAN.text Read the answer
+                            +e.SPAN.icon.icon-toggle 
+                        +b.SPAN.icon-close-wrapper 
+                            +e.SPAN.text Close the answer
+                            +e.SPAN.icon.icon-close
+                    .faq__answer
+                        .faq__text We are a full service moving company. We can do any size of move either locally or across the state of California. Your large home, small apartment, artist or work studio, home office, retail storefront, storage unit, commercial or medical office – we have extensive experience with all types of moves. No job is too big or too small.
+                -i++
+                
+    include /components/stay-in-touch/stay-in-touch

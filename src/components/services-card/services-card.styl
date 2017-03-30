@@ -4,7 +4,6 @@
     float left
     margin 0 3.333%
     height 368px
-    border-bottom 3px solid $red
     &:first-child
         margin-left 0
     &:last-child
@@ -14,20 +13,19 @@
     .img-wrapper
         width 100%
         height 53%
-        position relative
-        overflow hidden
+        margin-bottom -15px
         &__img
-            position absolute
-            display block
+            display inline-block
             left 50%
-            transform translateX(-50%)
-            height 100%
+            max-width 100%
     .text
         height 47%
         text-align left
+        width 100%
         padding 18px 15px
         position relative
         transition .2s linear all
+        border-bottom 3px solid $red
         &__title
             color $red
             overflow hidden
@@ -40,7 +38,7 @@
             font-size 14px
             font-family TitilliumWeb-Light
             line-height 24px
-            height 78px
+            height 72px
             overflow hidden
         
         &:hover 
@@ -48,15 +46,15 @@
         &:hover .text__title, &:hover .text__content
             color #fff
         &:before
-            top -20px
-            transition .2s linear visibility 
+            top -18px
+            
             content ''
             visibility hidden
     .text:hover 
         &:before 
             position absolute
             visibility visible
-            top -20px
+            top -18px
             z-index 5
             left 50%
             transform translateX(-50%)

@@ -1,0 +1,95 @@
+
+.form-container
+    z-index 2
+    position relative 
+    .stay-in-touch
+        position absolute
+        margin-top 40px
+        bottom -550px
+        .fieldset
+            border 0
+            color #fff
+            &__title
+                font-family TitilliumWeb-Bold
+                font-size 33px
+                text-transform uppercase
+            &__subtitle
+                font-size 16px
+                font-family TitilliumWeb-Regular
+                margin-bottom 20px
+            .form-control
+                position relative
+                margin-bottom 20px
+                &--textarea
+                    .form-control__form-input
+                        height 128px
+                        resize none
+                    label.error
+                        display inline-block
+                        
+                        bottom -16px !important
+                &__label
+                    font-family TitilliumWeb-Bold
+                    font-size 14px
+                    display block
+                &__form-input
+                    width 100%
+                    height 48px
+                    border 1px solid transparent
+                    padding-left 10px
+                    border-radius 5px
+                    font-family TitilliumWeb-Light
+                    font-size 14px
+                    &:focus
+                        outline none
+                &.error
+                    border 1px solid  $red
+                    border-bottom-left-radius 0
+                label.error
+                    padding 0 3px
+                    // background-color #fff
+                    font-family TitilliumWeb-Bold
+                    left 0
+                    position absolute
+                    bottom -21px
+                    
+                    font-size 14px
+                    color $red
+                    text-shadow 0 1px #000
+                &__form-submit
+                    float right 
+                    height 48px
+                    border 1px solid transparent
+                    border-radius 5px
+                    padding 0 10px
+                    font-family TitilliumWeb-Bold
+                    background-color $red
+                    color #fff
+                    text-transform uppercase
+                    cursor pointer
+                    &:hover
+                        background-color #ff0c00
+                    &:focus
+                        outline none
+                        
+@media(max-width 960px)
+    .form-container
+        background-color $blue
+        padding-left 10px
+        padding-right 10px
+        .stay-in-touch
+            position static
+            width 300px
+            margin-left auto
+            margin-right auto
+            .fieldset
+                &__title, &__subtitle
+                    text-align center
+@media(max-width 480px)
+    .form-container
+        .stay-in-touch
+            width 100%
+            .fieldset
+                &__subtitle
+                    font-size 14px
+            

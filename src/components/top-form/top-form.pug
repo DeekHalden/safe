@@ -1,55 +1,56 @@
 +b.FORM(action="").top-form.clearfix#top-form
     +e.H2.title REQUEST <br>A QUOTE NOW
-    .form-slider
-        +b.first-step(data-step="1")#first-step
-            +b.input-group
-                +e.LABEL.label(for="from") FROM
-                +e.INPUT(type="text" id="from" placeholder="city of zip code" data-validation="alphanumeric length" data-validation-length="min1"  data-validation-error-msg="Invalid zip code" name="from").input.form-control
-            +b.input-group
-                +e.LABEL.label(for="to") TO
-                +e.INPUT(type="text" id="to" placeholder="city of zip code" data-validation="alphanumeric length" data-validation-length="min1"  data-validation-error-msg="Invalid zip code" name="to").input.form-control
-            +b.input-group
-                +e.LABEL.label(for="size") HOME SIZE
-                +b.SELECT.select(data-validation="length" data-validation-length="min1" data-validation-error-msg="This field is required" id="size" name="size").input.form-control
-                    +e.OPTION.el(data-index="0" value="") ---
-                    +e.OPTION.el(data-index="1" value="1") Studio
-                    +e.OPTION.el(data-index="2" value="2") 1 bedroom
-                    +e.OPTION.el(data-index="3" value="3") 2 bedroom(small size,few items)
-                    +e.OPTION.el(data-index="4" value="4") 2 bedroom(avg. size, avg. items)
-                    +e.OPTION.el(data-index="5" value="5") 2 bedroom(large, many items)
-                    +e.OPTION.el(data-index="6" value="6") 3 bedroom(avg. size, avg. items)
-                    +e.OPTION.el(data-index="7" value="7") 3 bedroom(large, many items)
-                    +e.OPTION.el(data-index="8" value="8") 4 bedroom(avg. size, avg. items)
-                    +e.OPTION.el(data-index="9" value="") 4 bedroom(large, many items)
-                    +e.OPTION.el(data-index="10" value="") Commercial(avg. size, avg. items)
-                    +e.OPTION.el(data-index="11" value="last") Commercial(large, many items)
-            +b.input-group
-                +e.LABEL.label(for="date") DATE
-                +e.INPUT(type="text"  placeholder="date" id="date" data-validation="date" data-validation-format="mm/dd/yyyy" name="date").input.form-control.input-date
-        +b.second-step(data-step="2")#second-step
-            +b.input-group
-                +e.LABEL.label(for="name") YOUR NAME:
-                +e.INPUT(type="text" id="name" placeholder="your name" data-validation="alphanumeric length" data-validation-length="min1"  data-validation-error-msg="This field is required" name="name").input.form-control
-            +b.input-group
-                +e.LABEL.label(for="hear") HOW DID YOU HEAR ABOUT US:
-                +b.SELECT.select(data-validation="length" data-validation-length="min1" data-validation-error-msg="This field is required" id="hear" name="hear").input.form-control
-                    +e.OPTION.el(data-index="0" value="") ---
-                    +e.OPTION.el(data-index="1" value="1") Studio
-                    +e.OPTION.el(data-index="2" value="2") 1 bedroom
-                    +e.OPTION.el(data-index="3" value="3") 2 bedroom(small size,few items)
-                    +e.OPTION.el(data-index="4" value="4") 2 bedroom(avg. size, avg. items)
-                    +e.OPTION.el(data-index="5" value="5") 2 bedroom(large, many items)
-                    +e.OPTION.el(data-index="6" value="6") 3 bedroom(avg. size, avg. items)
-                    +e.OPTION.el(data-index="7" value="7") 3 bedroom(large, many items)
-                    +e.OPTION.el(data-index="8" value="8") 4 bedroom(avg. size, avg. items)
-                    +e.OPTION.el(data-index="9" value="") 4 bedroom(large, many items)
-                    +e.OPTION.el(data-index="10" value="") Commercial(avg. size, avg. items)
-                    +e.OPTION.el(data-index="11" value="last") Commercial(large, many items)
-            +b.input-group
-                +e.LABEL.label(for="phone") PHONE:
-                +e.INPUT(type="text" id="phone" placeholder="your phone" data-validation="alphanumeric length" data-validation-length="10-10"  data-validation-error-msg="Invalid zip code" name="phone").input.form-control
-            +b.input-group
-                +e.LABEL.label(for="email") EMAIL:
-                +e.INPUT(type="text"  placeholder="your email" id="email" data-validation="email" data-validation-error-msg="Enter email in xx@xx.xx format" name="email").input.form-control 
-    +b.input-group
-        +b.INPUT(type="submit" value="get started").action-btn
+    +b.first-step(data-step="1")#first-step
+        +b.input-group
+            +e.LABEL.label(for="from") FROM:
+            +e.INPUT(type="text" id="from" placeholder="city of zip code" name="from" required).input.form-control
+        +b.input-group
+            +e.LABEL.label(for="to") TO:
+            +e.INPUT(type="text" id="to" placeholder="city of zip code" name="to" required).input.form-control
+        +b.input-group
+            +e.LABEL.label(for="size" ) HOME SIZE:
+            +b.SELECT.select(id="size" name="size" required).input.form-control.form-control--select
+                +e.OPTION.el(data-index="0" value="") ---
+                +e.OPTION.el(data-index="1" value="1") Studio
+                +e.OPTION.el(data-index="2" value="2") 1 bedroom
+                +e.OPTION.el(data-index="3" value="3") 2 bedroom(small size,few items)
+                +e.OPTION.el(data-index="4" value="4") 2 bedroom(avg. size, avg. items)
+                +e.OPTION.el(data-index="5" value="5") 2 bedroom(large, many items)
+                +e.OPTION.el(data-index="6" value="6") 3 bedroom(avg. size, avg. items)
+                +e.OPTION.el(data-index="7" value="7") 3 bedroom(large, many items)
+                +e.OPTION.el(data-index="8" value="8") 4 bedroom(avg. size, avg. items)
+                +e.OPTION.el(data-index="9" value="") 4 bedroom(large, many items)
+                +e.OPTION.el(data-index="10" value="") Commercial(avg. size, avg. items)
+                +e.OPTION.el(data-index="11" value="last") Commercial(large, many items)
+        +b.input-group.input-group--date
+            +e.LABEL.label(for="date") DATE:
+            +e.INPUT(type="text"  placeholder="date" id="date" name="date" required readonly="true").input.form-control.input-date
+    +b.second-step(data-step="2")#second-step
+        +b.input-group
+            +e.LABEL.label(for="name") YOUR NAME:
+            +e.INPUT(type="text" required id="name" placeholder="your name" name="name").input.form-control
+        +b.input-group
+            +e.LABEL.label(for="hear") HOW DID YOU HEAR ABOUT US:
+            +b.SELECT.select(id="hear" required name="hear").input.form-control.form-control--select
+                +e.OPTION.el(data-index="0" value="") ---
+                +e.OPTION.el(data-index="1" value="1") Studio
+                +e.OPTION.el(data-index="2" value="2") 1 bedroom
+                +e.OPTION.el(data-index="3" value="3") 2 bedroom(small size,few items)
+                +e.OPTION.el(data-index="4" value="4") 2 bedroom(avg. size, avg. items)
+                +e.OPTION.el(data-index="5" value="5") 2 bedroom(large, many items)
+                +e.OPTION.el(data-index="6" value="6") 3 bedroom(avg. size, avg. items)
+                +e.OPTION.el(data-index="7" value="7") 3 bedroom(large, many items)
+                +e.OPTION.el(data-index="8" value="8") 4 bedroom(avg. size, avg. items)
+                +e.OPTION.el(data-index="9" value="") 4 bedroom(large, many items)
+                +e.OPTION.el(data-index="10" value="") Commercial(avg. size, avg. items)
+                +e.OPTION.el(data-index="11" value="last") Commercial(large, many items)
+        +b.input-group
+            +e.LABEL.label(for="phone" ) PHONE:
+            +e.INPUT(type="text" id="phone" required placeholder="your phone" name="phone").input.form-control
+        +b.input-group
+            +e.LABEL.label(for="email") EMAIL :
+            +e.INPUT(type="text" required  placeholder="your email" id="email"  name="email").input.form-control 
+    +b.input-group.input-group--button
+        +b.INPUT(type="button" value="next" ).action-btn.action-btn--next
+        +b.INPUT(type="button" value="previous").action-btn.action-btn--prev
+        +b.INPUT(type="submit" value="get started").action-btn.action-btn--submit

@@ -1,26 +1,20 @@
-
 ::-webkit-input-placeholder  /* Chrome/Opera/Safari */
     color #6b6fa0
     font-family TitilliumWeb-Regular
     font-size 13px
-
 ::-moz-placeholder  /* Firefox 19+ */
     color #6b6fa0
     font-family TitilliumWeb-Regular
     font-size 13px
-
 :-ms-input-placeholder  /* IE 10+ */
     color #6b6fa0
     font-family TitilliumWeb-Regular
     font-size 13px
-
 :-moz-placeholder  /* Firefox 18- */
     color #6b6fa0
     font-family TitilliumWeb-Regular
     font-size 13px
-
-
-
+    
 .top-form
     width 32%
     float right
@@ -29,35 +23,106 @@
             color #fff
             font-size  32px
             display inline-block
+    .second-step
+        display none
     .input-group
-            width 48%
-            display inline-block
+        height 90px
+        width 48%
+        display inline-block
+        float left
+        margin 10px 1%
+        position relative
+        &--date
+            &:after
+                position absolute
+                right 10px
+                content ''
+                bottom 14px
+                width 15px
+                height 15px
+                background url('./../images/calendar.png') no-repeat center
+                background-size 100% 100%
+                
+        &--button
+            width 100%
+        &.error
+            border 1px solid  $red
+            border-bottom-left-radius 0
+        label.error
+            padding 0 3px
+            // background-color #fff
+            font-family TitilliumWeb-Bold
+            left 0
+            position absolute
+            bottom -21px
+            
+            font-size 14px
+            color $red
+            text-shadow 0 1px #000
+        &__label
+            color #fff
+            display block
+            position absolute
+            bottom 50%
+        .form-control
+            position absolute
+            bottom 0
+            display block
+            height 44px
+            font-size 14px
+            border-radius 5px
+            border 0
+            width 100%
+            padding-left 10px
+            color #6b6fa0
+            &:active, &:focus
+                outline none
+            .form-control--select
+                &:after
+                    content ''
+                    position absolute
+                    right 10px
+                    top 22px
+                    border-bottom 1px solid transparent
+                    border-left 2px solid transparent
+                    border-right 2px solid transparent
+                    border-top 5px solid #000
+                    height 0
+                    width 0
+                    z-index 0
+                
+        .action-btn
             float left
-            margin 10px 1%
-            &__label
-                    color #fff
-            .form-control
-                    display block
-                    height 44px
-                    border-radius 5px
-                    border 0
-                    width 100%
-                    padding-left 10px
-                    color #6b6fa0
-            .action-btn
-                    margin-top 30px
-                    background-color $red
-                    height 44px
-                    border-radius 5px
-                    color #fff
-                    border 0
-                    text-transform uppercase
-                    width 191px
-                    font-family TitilliumWeb-Bold
-                    cursor pointer
-                    &:hover
-                            background-color #ff0c00
-                                
+            
+            margin-top 30px
+            background-color $red
+            height 44px
+            border-radius 5px
+            color #fff
+            border 0
+            text-transform uppercase
+            width 48%
+            font-family TitilliumWeb-Bold
+            cursor pointer
+            margin-right 1%
+            &--prev, &--submit
+                display none
+            &:hover
+                background-color #ff0c00
+            &:focus, &:active
+                outline none
 @media(max-width 1199px)
     .top-form
-        width 100%
+        width 50%
+        background-color rgba(39, 44, 102, .7)
+        border-radius 10px
+        padding-left 10px
+        padding-right 10px
+        float none
+        margin 0 auto
+@media(max-width 720px)
+    .top-form
+        width 300px
+// @media(max-width 480px)
+//     .top-form
+//         width 100%

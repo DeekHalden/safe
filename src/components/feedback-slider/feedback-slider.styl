@@ -1,19 +1,23 @@
 .feedback-slider
-    height 500px
-    margin-bottom 200px
+    min-height 500px
     padding 0 15px
-    .slick-next 
+    .slick-next
+        top 225px
         @extends .info-slider .slick-next
         right -2px
     .slick-prev 
+        top 225px
         @extends .info-slider .slick-prev
     .item
+        height 100%
         width 370px
         background-color #fff
         margin 25px 15px
         border 1px solid transparent
         border-radius 5px
         cursor grab
+        &:focus
+            outline none
         // .item-header
         .item-header
             padding 10px 23px
@@ -24,6 +28,9 @@
                 float left
                 width 80px
                 height 80px
+                &__img
+                    display block
+                    width 100%
             .pers-info
                 float left
                 margin-left 15px
@@ -48,7 +55,7 @@
                 clear both
                 color $blue
                 font-size 16px
-                height 100px
+                height 90px
                 overflow hidden
                 &--active
                     height 100%
@@ -61,14 +68,12 @@
                     color orange
                 &--visible
                     visibility visible
-                &--active
-                    color $blue
-                    &:hover
-                        color blue
                 &:focus
                     outline none
         .item-footer
-            padding 11px 23px
+            cursor pointer
+            padding 26px 23px
+            background url('../images/box-shadow.png') no-repeat center top
             .title
                 color $blue
                 font-family TitilliumWeb-Bold
@@ -91,9 +96,9 @@
 @media(max-width 960px)
     .feedback-slider
         .slick-next 
-            right 116px
+            right 125px
         .slick-prev 
-            left 116px
+            left 125px
         .item
             // width 400px !important
             margin-left 150px
@@ -101,16 +106,26 @@
 @media(max-width 720px)
     .feedback-slider
         .slick-next 
-            right 7px
+            right 16px
         .slick-prev 
-            left 7px
+            left 16px
         .item
             // width 400px !important
             margin-left 40px
             margin-right 40px
 @media(max-width 480px)
     .feedback-slider
+        .slick-next 
+            right 3px
+        .slick-prev 
+            left 3px
         .item
             width 300px
-            margin-left 0
-            margin-right 0
+            margin-left 24px
+            margin-right 24px
+            .content
+                .pers-info
+                    width 60%
+                .img-wrapper
+                    width 40px
+            //     padding 31px 40px

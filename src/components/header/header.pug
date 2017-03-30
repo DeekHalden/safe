@@ -3,7 +3,8 @@
         +b.A().menu-toggle
             +e.SPAN.icon.icon-toggle2
         +b.logo
-            +e.IMG(src="./images/logo.png").img
+            a(href="#top-form")
+                +e.IMG(src="./images/logo.png").img
         include /components/nav/nav
         +b.email-wrap 
             span Email us:
@@ -17,6 +18,6 @@
             +e.el.A(class="popup-with-zoom-anim" href="#call-dialog")
                 +e.SPAN.icon.icon-phone
                 
-        +b.dialog#call-dialog.zoom-anim-dialog.mfp-hide
+        +b.dialog#call-dialog.zoom-anim-dialog.mfp-hide.small-dialog
             +e.A(href="tel:(333)777-3333").phone (333) 777-3333
             +e.A(href="tel:(333)777-3333").phone (333) 777-3333

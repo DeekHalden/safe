@@ -1,32 +1,30 @@
 .container-fluid.footer-wrapper#contacts
     .container.footer.clearfix
-        +b.logo-wrapper
-            +b.A(href="/").img-wrapper
-                //- +e.IMG(src="./assets/images/logo-footer.png").img
-            +e.SPAN.copyright &copy; A2B movers 2017
+        +b.logo
+            +b.A(href="#top-form").img-wrapper
+                +e.IMG(src="./images/logo.png").img
+            +e.SPAN.copyright &copy; Safederal 2017
         +b.info-wrap 
                 +e.SPAN.el Contacts
                 +e.A(href="tel:(333)777-3333").phone 
-                    //- img(src="./assets/images/phone.png").img
                     span.tel (333) 777-3333
                 +e.SPAN.time-open every day 8 A.M.- 8 P.M.
-                +e.A(href="mailto:support@njlocal.com").mail support@njlocal.com
+                +e.A(href="mailto:support@njlocal.com").mail info@safederal.com
         +b.socials.clearfix
             +b.social
                 +e.SPAN.icon.icon-fb
                 +e.A(href="").link.link--facebook facebook
             +b.social
-                +e.SPAN.icon.icon-tw
+                +e.SPAN.icon.icon-twitter
                 +e.A(href="").link.link--twitter twitter
             +b.social
                 +e.SPAN.icon.icon-g
                 +e.A(href="").link.link--google-plus google plus
             +b.social
-                +e.SPAN.icon.icon-inst
+                +e.SPAN.icon.icon-instagram
                 +e.A(href="").link.link--instagram instagram
         +b.developed-by
-            +b.A(href="http://webcase.studio/en/" target="_blank").href
-                
-                +e.SPAN.text Developed by 
-                    //- +e.IMG(src="./assets/images/webcase.png").img                    
+            +b.SPAN.text Developed by 
+                +b.A(href="http://webcase.studio/en/" target="_blank").href
+                    +e.IMG(src="./images/webcase.png").img                    
 

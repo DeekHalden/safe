@@ -1,17 +1,32 @@
 .datepickers-container
     z-index 1123
-#quick-quote-form-popup
-    background-color rgba(37,169,55,.85)
-    // @extends .quick-quote-form
-    .quick-quote-form-popup
+#top-form-popup
+    .mfp-close
+        color #fff
+    .popup-form
+        @extends .top-form
+        width 100%
         padding-top 20px
+        float none
+        
         &__dismiss
             display none
-        .right-side
+        .second-step
+            display block
+        .input-group
+            .action-btn--submit
+                display block
+                width 180px
+                
+@media(max-width 480px)
+    #top-form-popup
+        .popup-form
             .input-group
-                .form-submit
-                    float right
-                    margin-top -3px
+                width 100%
+                height auto
+                &__label,.form-control
+                    position static
+                    
      
 .reason-item
     font-family TitilliumWeb-Regular
@@ -26,9 +41,9 @@
         .cost-p-hour, .total-info
             color $blue
         .badge
-            background-color #1b952c
+            background-color $blue
             &:hover
-                background-color #0aaf21
+                background-color #0317f9
     &--more
         .cost-p-hour, .total-info
             color $red
@@ -37,9 +52,11 @@
         .badge
             background-color #ff3030
             &:hover
-                background-color rgba(251,20,20,1)
+                background-color $red
         .conclusion
             display none !important
+            
+                
     .badge
         text-decoration none
         position absolute
@@ -104,10 +121,18 @@
         text-transform uppercase
         color #272c66
         &__styled
-            font-family TitilliumWeb-Regular
-#small-thanks
+            font-family TitilliumWeb-Bold
+            
+.dialog
+    color #fff
+    background-color $blue
+    border-radius 10px
+    a
+        color #fff
     .mfp-close
-        color #000 !important
+        color #fff !important
+        &:hover 
+            color $red !important
         
 
 @media(max-width 720px)

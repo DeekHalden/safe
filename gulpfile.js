@@ -14,27 +14,8 @@ const   gulp        = require('gulp'),
         notify = require("gulp-notify"),
         plumber = require('gulp-plumber');
 
-gulp.task('styles', () => {
-    return gulp.src('src/**/styles.styl')
-        .pipe(stylus({
-            'include css': true
-        }))
-        // .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-        .on("error", notify.onError({
-            message: "Error: <%= error.message %>",
-            title: "Error running something"
-        }))
-        .pipe(autoprefixer({
-            browsers: ['last 4 versions'],
-            cascade: false
-        }))
-        // .pipe( csso() )
-        .pipe( rename('bundle.min.css') )
-        .pipe( gulp.dest('dist/assets/css') )
-        .pipe( browserSync.reload({
-            stream: true
-        }))
-})
+
+
 
 gulp.task('styles', () => {
     return gulp.src('src/**/styles.styl')
@@ -50,7 +31,7 @@ gulp.task('styles', () => {
             browsers: ['last 4 versions'],
             cascade: false
         }))
-        // .pipe( csso() )
+        .pipe( csso() )
         .pipe( rename('bundle.min.css') )
         .pipe( gulp.dest('wp-content/themes/safederal/css') )
         .pipe( browserSync.reload({
@@ -60,7 +41,7 @@ gulp.task('styles', () => {
 
 gulp.task('js', function (cb) {
   pump([
-        gulp.src(['src/assets/scripts/vendor/*.js','src/assets/scripts/client/*.js','!src/assets/bemto/**/*.js']),concat('bundle.min.js'),
+        gulp.src(['src/assets/scripts/vendor/*.js','src/assets/scripts/client/*.js','!src/assets/bemto/**/*.js']),concat('bundle.min.js'),uglify(),
         gulp.dest('wp-content/themes/safederal/scripts')
     ],
     cb

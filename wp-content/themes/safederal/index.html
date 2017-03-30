@@ -3,18 +3,35 @@
   <head>
     <title>BLACKSEADUDE   </title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./css/bundle.min.css">
   </head>
   <body>
     <div class="wrapper">
-      <nav class="nav nav--left"><a class="nav__el" href="#services">Services</a><a class="nav__el" href="#faq">FAQ</a><a class="nav__el" href="#reviews">Reviews</a><a class="nav__el" href="#about">About us</a><a class="nav__el" href="#contacts">Contact us</a>
+      <nav class="nav nav--left"><a class="nav__el" href="#services">Services</a><a class="nav__el" href="#advantages">Advantages</a><a class="nav__el" href="#feedback-slider">Clients Reviews</a><a class="nav__el" href="#about">About us</a><a class="nav__el" href="#contacts">Contact</a>
       </nav>
       <div class="container-fluid header" id="header">
         <div class="container clearfix"><a class="menu-toggle"><span class="menu-toggle__icon icon-toggle2"></span></a>
-          <div class="logo"><img class="logo__img" src="./images/logo.png" alt="" role="presentation"/>
+          <div class="logo"><a href="#top-form"><img class="logo__img" src="./images/logo.png" alt="" role="presentation"/></a>
           </div>
-          <nav class="nav"><a class="nav__el" href="#services">Services</a><a class="nav__el" href="#advantages">Advantages</a><a class="nav__el" href="#reviews">Clients Reviews</a><a class="nav__el" href="#about">About us</a><a class="nav__el" href="#contacts">Contact</a>
+          <nav class="nav"><a class="nav__el" href="#services">Services</a><a class="nav__el" href="#advantages">Advantages</a><a class="nav__el" href="#feedback-slider">Clients Reviews</a><a class="nav__el" href="#about">About us</a><a class="nav__el" href="#contacts">Contact</a>
           </nav>
           <div class="email-wrap"> <span>Email us:</span><a class="email-wrap__phone" href="info@safederal.com">info@safederal.com</a>
           </div>
@@ -22,112 +39,110 @@
           </div>
           <div class="phone-xs-visible"><a class="phone-xs-visible__el popup-with-zoom-anim" href="#call-dialog"><span class="phone-xs-visible__icon icon-phone"></span></a>
           </div>
-          <div class="dialog zoom-anim-dialog mfp-hide" id="call-dialog"><a class="dialog__phone" href="tel:(333)777-3333">(333) 777-3333</a><a class="dialog__phone" href="tel:(333)777-3333">(333) 777-3333</a>
+          <div class="dialog zoom-anim-dialog mfp-hide small-dialog" id="call-dialog"><a class="dialog__phone" href="tel:(333)777-3333">(333) 777-3333</a><a class="dialog__phone" href="tel:(333)777-3333">(333) 777-3333</a>
           </div>
         </div>
       </div>
-      <div class="top-form-container container-fluid">
+      <div class="top-form-container container-fluid" id="top-form">
         <div class="top-form-wrapper container clearfix">
           <div class="text">
             <h2 class="text__title">SAFEDERAL
             </h2>
-            <h3 class="text__slogan">The Moving Company <br> You Can Trust
+            <h3 class="text__slogan">The Moving Company You Can Trust
             </h3>
           </div>
           <form class="top-form clearfix" action="" id="top-form">
             <h2 class="top-form__title">REQUEST <br>A QUOTE NOW
             </h2>
-            <div class="form-slider">
-              <div class="first-step" data-step="1" id="first-step">
-                <div class="input-group">
-                  <label class="input-group__label" for="from">FROM
-                  </label><input class="input-group__input form-control" type="text" id="from" placeholder="city of zip code" data-validation="alphanumeric length" data-validation-length="min1" data-validation-error-msg="Invalid zip code" name="from"/>
-                </div>
-                <div class="input-group">
-                  <label class="input-group__label" for="to">TO
-                  </label><input class="input-group__input form-control" type="text" id="to" placeholder="city of zip code" data-validation="alphanumeric length" data-validation-length="min1" data-validation-error-msg="Invalid zip code" name="to"/>
-                </div>
-                <div class="input-group">
-                  <label class="input-group__label" for="size">HOME SIZE
-                  </label>
-                  <select class="select input form-control" data-validation="length" data-validation-length="min1" data-validation-error-msg="This field is required" id="size" name="size">
-                    <option class="select__el" data-index="0" value="">---
-                    </option>
-                    <option class="select__el" data-index="1" value="1">Studio
-                    </option>
-                    <option class="select__el" data-index="2" value="2">1 bedroom
-                    </option>
-                    <option class="select__el" data-index="3" value="3">2 bedroom(small size,few items)
-                    </option>
-                    <option class="select__el" data-index="4" value="4">2 bedroom(avg. size, avg. items)
-                    </option>
-                    <option class="select__el" data-index="5" value="5">2 bedroom(large, many items)
-                    </option>
-                    <option class="select__el" data-index="6" value="6">3 bedroom(avg. size, avg. items)
-                    </option>
-                    <option class="select__el" data-index="7" value="7">3 bedroom(large, many items)
-                    </option>
-                    <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
-                    </option>
-                    <option class="select__el" data-index="9" value="">4 bedroom(large, many items)
-                    </option>
-                    <option class="select__el" data-index="10" value="">Commercial(avg. size, avg. items)
-                    </option>
-                    <option class="select__el" data-index="11" value="last">Commercial(large, many items)
-                    </option>
-                  </select>
-                </div>
-                <div class="input-group">
-                  <label class="input-group__label" for="date">DATE
-                  </label><input class="input-group__input form-control input-date" type="text" placeholder="date" id="date" data-validation="date" data-validation-format="mm/dd/yyyy" name="date"/>
-                </div>
+            <div class="first-step" data-step="1" id="first-step">
+              <div class="input-group">
+                <label class="input-group__label" for="from">FROM:
+                </label><input class="input-group__input form-control" type="text" id="from" placeholder="city of zip code" name="from" required="required"/>
               </div>
-              <div class="second-step" data-step="2" id="second-step">
-                <div class="input-group">
-                  <label class="input-group__label" for="name">YOUR NAME:
-                  </label><input class="input-group__input form-control" type="text" id="name" placeholder="your name" data-validation="alphanumeric length" data-validation-length="min1" data-validation-error-msg="This field is required" name="name"/>
-                </div>
-                <div class="input-group">
-                  <label class="input-group__label" for="hear">HOW DID YOU HEAR ABOUT US:
-                  </label>
-                  <select class="select input form-control" data-validation="length" data-validation-length="min1" data-validation-error-msg="This field is required" id="hear" name="hear">
-                    <option class="select__el" data-index="0" value="">---
-                    </option>
-                    <option class="select__el" data-index="1" value="1">Studio
-                    </option>
-                    <option class="select__el" data-index="2" value="2">1 bedroom
-                    </option>
-                    <option class="select__el" data-index="3" value="3">2 bedroom(small size,few items)
-                    </option>
-                    <option class="select__el" data-index="4" value="4">2 bedroom(avg. size, avg. items)
-                    </option>
-                    <option class="select__el" data-index="5" value="5">2 bedroom(large, many items)
-                    </option>
-                    <option class="select__el" data-index="6" value="6">3 bedroom(avg. size, avg. items)
-                    </option>
-                    <option class="select__el" data-index="7" value="7">3 bedroom(large, many items)
-                    </option>
-                    <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
-                    </option>
-                    <option class="select__el" data-index="9" value="">4 bedroom(large, many items)
-                    </option>
-                    <option class="select__el" data-index="10" value="">Commercial(avg. size, avg. items)
-                    </option>
-                    <option class="select__el" data-index="11" value="last">Commercial(large, many items)
-                    </option>
-                  </select>
-                </div>
-                <div class="input-group">
-                  <label class="input-group__label" for="phone">PHONE:
-                  </label><input class="input-group__input form-control" type="text" id="phone" placeholder="your phone" data-validation="alphanumeric length" data-validation-length="10-10" data-validation-error-msg="Invalid zip code" name="phone"/>
-                </div>
-                <div class="input-group">
-                  <label class="input-group__label" for="email">EMAIL:
-                  </label><input class="input-group__input form-control" type="text" placeholder="your email" id="email" data-validation="email" data-validation-error-msg="Enter email in xx@xx.xx format" name="email"/>
-                </div>
+              <div class="input-group">
+                <label class="input-group__label" for="to">TO:
+                </label><input class="input-group__input form-control" type="text" id="to" placeholder="city of zip code" name="to" required="required"/>
+              </div>
+              <div class="input-group">
+                <label class="input-group__label" for="size">HOME SIZE:
+                </label>
+                <select class="select input form-control form-control--select" id="size" name="size" required="required">
+                  <option class="select__el" data-index="0" value="">---
+                  </option>
+                  <option class="select__el" data-index="1" value="1">Studio
+                  </option>
+                  <option class="select__el" data-index="2" value="2">1 bedroom
+                  </option>
+                  <option class="select__el" data-index="3" value="3">2 bedroom(small size,few items)
+                  </option>
+                  <option class="select__el" data-index="4" value="4">2 bedroom(avg. size, avg. items)
+                  </option>
+                  <option class="select__el" data-index="5" value="5">2 bedroom(large, many items)
+                  </option>
+                  <option class="select__el" data-index="6" value="6">3 bedroom(avg. size, avg. items)
+                  </option>
+                  <option class="select__el" data-index="7" value="7">3 bedroom(large, many items)
+                  </option>
+                  <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
+                  </option>
+                  <option class="select__el" data-index="9" value="">4 bedroom(large, many items)
+                  </option>
+                  <option class="select__el" data-index="10" value="">Commercial(avg. size, avg. items)
+                  </option>
+                  <option class="select__el" data-index="11" value="last">Commercial(large, many items)
+                  </option>
+                </select>
+              </div>
+              <div class="input-group input-group--date">
+                <label class="input-group__label" for="date">DATE:
+                </label><input class="input-group__input form-control input-date" type="text" placeholder="date" id="date" name="date" required="required" readonly="true"/>
               </div>
             </div>
-            <div class="input-group"><input class="action-btn" type="submit" value="get started"/>
+            <div class="second-step" data-step="2" id="second-step">
+              <div class="input-group">
+                <label class="input-group__label" for="name">YOUR NAME:
+                </label><input class="input-group__input form-control" type="text" required="required" id="name" placeholder="your name" name="name"/>
+              </div>
+              <div class="input-group">
+                <label class="input-group__label" for="hear">HOW DID YOU HEAR ABOUT US:
+                </label>
+                <select class="select input form-control form-control--select" id="hear" required="required" name="hear">
+                  <option class="select__el" data-index="0" value="">---
+                  </option>
+                  <option class="select__el" data-index="1" value="1">Studio
+                  </option>
+                  <option class="select__el" data-index="2" value="2">1 bedroom
+                  </option>
+                  <option class="select__el" data-index="3" value="3">2 bedroom(small size,few items)
+                  </option>
+                  <option class="select__el" data-index="4" value="4">2 bedroom(avg. size, avg. items)
+                  </option>
+                  <option class="select__el" data-index="5" value="5">2 bedroom(large, many items)
+                  </option>
+                  <option class="select__el" data-index="6" value="6">3 bedroom(avg. size, avg. items)
+                  </option>
+                  <option class="select__el" data-index="7" value="7">3 bedroom(large, many items)
+                  </option>
+                  <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
+                  </option>
+                  <option class="select__el" data-index="9" value="">4 bedroom(large, many items)
+                  </option>
+                  <option class="select__el" data-index="10" value="">Commercial(avg. size, avg. items)
+                  </option>
+                  <option class="select__el" data-index="11" value="last">Commercial(large, many items)
+                  </option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label class="input-group__label" for="phone">PHONE:
+                </label><input class="input-group__input form-control" type="text" id="phone" required="required" placeholder="your phone" name="phone"/>
+              </div>
+              <div class="input-group">
+                <label class="input-group__label" for="email">EMAIL :
+                </label><input class="input-group__input form-control" type="text" required="required" placeholder="your email" id="email" name="email"/>
+              </div>
+            </div>
+            <div class="input-group input-group--button"><input class="action-btn action-btn--next" type="button" value="next"/><input class="action-btn action-btn--prev" type="button" value="previous"/><input class="action-btn action-btn--submit" type="submit" value="get started"/>
             </div>
           </form>
         </div>
@@ -148,7 +163,7 @@
             <div class="img-wrapper"><img class="img-wrapper__img" src="./images/2.png" alt="" role="presentation"/>
             </div>
             <div class="text">
-              <h2 class="text__title">Lorem ipsum
+              <h2 class="text__title">LOCAL MOVING
               </h2>
               <p class="text__content">Lorem ipsum Ut pariatur anim id dolor elit non laboris commodo cillum consequat.
               </p>
@@ -158,7 +173,7 @@
             <div class="img-wrapper"><img class="img-wrapper__img" src="./images/3.png" alt="" role="presentation"/>
             </div>
             <div class="text">
-              <h2 class="text__title">Lorem ipsum
+              <h2 class="text__title">Packing
               </h2>
               <p class="text__content">Lorem ipsum Ut pariatur anim id dolor elit non laboris commodo cillum consequat.
               </p>
@@ -168,7 +183,7 @@
             <div class="img-wrapper"><img class="img-wrapper__img" src="./images/4.png" alt="" role="presentation"/>
             </div>
             <div class="text">
-              <h2 class="text__title">Lorem ipsum
+              <h2 class="text__title">Commercial
               </h2>
               <p class="text__content">Lorem ipsum Ut pariatur anim id dolor elit non laboris commodo cillum consequat.
               </p>
@@ -177,7 +192,7 @@
         </div>
       </div>
       <div class="container-fluid reasons">
-        <div class="container clearfix">
+        <div class="container clearfix" id="advantages">
           <div class="reasons-container">
             <h2 class="reasons-container__title">TOP-6 Reasons to Choose <span class="reasons-container__title--styled">Safederal</span>
             </h2>
@@ -313,7 +328,7 @@
               <p class="total-info">total bill = <span class="total-info__total">$300</span>
               </p>
               <p class="conclusion"> <span class="conclusion__styled">$180 economy </span><span>than Pure Moving</span>
-              </p><a class="badge--less badge" href="#quick-quote-form-popup">pay less</a>
+              </p><a class="badge--less badge" href="#top-form-popup">pay less</a>
             </div>
             <div class="reason-item reason-item--more">
               <div class="img-wrapper"><img class="img-wrapper__img" src="./images/logo.png" alt="" role="presentation"/>
@@ -367,97 +382,105 @@
               <p class="conclusion"> <span class="conclusion__styled">$180 economy </span><span>than Pure Moving</span>
               </p><a class="badge--more badge" href="#small-thanks">pay more</a>
             </div>
-            <div class="container zoom-anim-dialog mfp-hide" id="quick-quote-form-popup">
-              <form class="quick-quote-form-popup clearfix" action="">
-                <h2 class="title">Moving never<br> can't be more easy!</h2>
-                <p class="subtitle">Quick quote</p>
-                <div class="quick-quote-form-popup__dismiss">&times;
-                </div>
-                <div class="wrapper">
-                  <div class="left-side">
-                    <div class="form-control"><input class="form-control__input" type="text" placeholder="Full name" data-validation="custom length" data-validation-regexp="^([A-Za-z_ ]+)$" data-validation-length="min1" data-validation-error-msg="Invalid value" name=""/>
-                    </div>
-                    <div class="form-control"><input class="form-control__input" type="email" placeholder="E-mail" data-validation="email" data-validation-error-msg="Enter email in xx@xx.xx format"/>
-                    </div>
-                    <div class="form-control"><input class="form-control__input phone-number" name="phone" data-validation="length number" data-validation-length="10-10" data-validation-error-msg="Phone number is not correct" placeholder="Phone number" type="text" onfocus="$(this).attr('type','number')"/>
-                    </div>
-                    <div class="form-control">
-                      <select class="select" data-validation="length" data-validation-length="min1" data-validation-error-msg="This field is required">
-                        <option class="select__el" data-index="0" value="">How did you know about us?
-                        </option>
-                        <option class="select__el" data-index="1" value="1">Studio
-                        </option>
-                        <option class="select__el" data-index="2" value="2">1 bedroom
-                        </option>
-                        <option class="select__el" data-index="3" value="3">2 bedroom(small size,few items)
-                        </option>
-                        <option class="select__el" data-index="4" value="4">2 bedroom(avg. size, avg. items)
-                        </option>
-                        <option class="select__el" data-index="5" value="5">2 bedroom(large, many items)
-                        </option>
-                        <option class="select__el" data-index="6" value="6">3 bedroom(avg. size, avg. items)
-                        </option>
-                        <option class="select__el" data-index="7" value="7">3 bedroom(large, many items)
-                        </option>
-                        <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
-                        </option>
-                        <option class="select__el" data-index="9" value="9">4 bedroom(large, many items)
-                        </option>
-                        <option class="select__el" data-index="10" value="10">Commercial(avg. size, avg. items)
-                        </option>
-                        <option class="select__el" data-index="11" value="last">Commercial(large, many items)    
-                        </option>
-                      </select>
-                    </div>
+            <div class="container zoom-anim-dialog mfp-hide dialog" id="top-form-popup">
+              <form class="popup-form clearfix" action="" id="popup-form">
+                <h2 class="popup-form__title">REQUEST <br>A QUOTE NOW
+                </h2>
+                <div class="first-step" data-step="1" id="first-step">
+                  <div class="input-group">
+                    <label class="input-group__label" for="popupfrom">FROM:
+                    </label><input class="input-group__input form-control" type="text" id="popupfrom" placeholder="city of zip code" name="popupfrom" required="required"/>
                   </div>
-                  <div class="center">
-                    <div class="form-control"><input class="form-control__input input-date" id="popup-date" type="text" placeholder="Moving Date" data-validation-format="yyyy/mm/dd"/>
-                    </div>
-                    <div class="form-control"><input class="form-control__input input-zip" data-validation="alphanumeric length" data-validation-length="min1" data-validation-error-msg="Invalid zip code" placeholder="Pick up zip" type="text"/>
-                    </div>
-                    <div class="form-control"><input class="form-control__input input-zip" data-validation="alphanumeric length" data-validation-length="min1" data-validation-error-msg="Invalid zip code" placeholder="Drop off zip" type="text"/>
-                    </div>
-                    <div class="form-control">
-                      <select class="select" data-validation="length" data-validation-length="min1" data-validation-error-msg="This field is required">
-                        <option class="select__el" data-index="0" value="">Select move size
-                        </option>
-                        <option class="select__el" data-index="1" value="1">Studio
-                        </option>
-                        <option class="select__el" data-index="2" value="2">1 bedroom
-                        </option>
-                        <option class="select__el" data-index="3" value="3">2 bedroom(small size,few items)
-                        </option>
-                        <option class="select__el" data-index="4" value="4">2 bedroom(avg. size, avg. items)
-                        </option>
-                        <option class="select__el" data-index="5" value="5">2 bedroom(large, many items)
-                        </option>
-                        <option class="select__el" data-index="6" value="6">3 bedroom(avg. size, avg. items)
-                        </option>
-                        <option class="select__el" data-index="7" value="7">3 bedroom(large, many items)
-                        </option>
-                        <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
-                        </option>
-                        <option class="select__el" data-index="9" value="">4 bedroom(large, many items)
-                        </option>
-                        <option class="select__el" data-index="10" value="">Commercial(avg. size, avg. items)
-                        </option>
-                        <option class="select__el" data-index="11" value="last">Commercial(large, many items)
-                        </option>
-                      </select>
-                    </div>
+                  <div class="input-group">
+                    <label class="input-group__label" for="popupto">TO:
+                    </label><input class="input-group__input form-control" type="text" id="popupto" placeholder="city of zip code" name="popupto" required="required"/>
                   </div>
-                  <div class="right-side">
-                    <div class="form-control textarea"><textarea class="form-control__input message" placeholder="Please let us know if you need help with packing or if you have any heavy items over 200lbs" data-validation="length" data-validation-length="min1" data-validation-error-msg="Message must not be empty"></textarea>
-                    </div>
-                    <div class="input-group clearfix"><input class="form-submit" type="submit" value="GET A QUOTE NOW"/><input class="form-more" type="button" value="MORE DETAILS"/>
-                    </div>
+                  <div class="input-group">
+                    <label class="input-group__label" for="popupsize">HOME SIZE:
+                    </label>
+                    <select class="select input form-control form-control--select" id="popupsize" name="popupsize" required="required">
+                      <option class="select__el" data-index="0" value="">---
+                      </option>
+                      <option class="select__el" data-index="1" value="1">Studio
+                      </option>
+                      <option class="select__el" data-index="2" value="2">1 bedroom
+                      </option>
+                      <option class="select__el" data-index="3" value="3">2 bedroom(small size,few items)
+                      </option>
+                      <option class="select__el" data-index="4" value="4">2 bedroom(avg. size, avg. items)
+                      </option>
+                      <option class="select__el" data-index="5" value="5">2 bedroom(large, many items)
+                      </option>
+                      <option class="select__el" data-index="6" value="6">3 bedroom(avg. size, avg. items)
+                      </option>
+                      <option class="select__el" data-index="7" value="7">3 bedroom(large, many items)
+                      </option>
+                      <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
+                      </option>
+                      <option class="select__el" data-index="9" value="">4 bedroom(large, many items)
+                      </option>
+                      <option class="select__el" data-index="10" value="">Commercial(avg. size, avg. items)
+                      </option>
+                      <option class="select__el" data-index="11" value="last">Commercial(large, many items)
+                      </option>
+                    </select>
+                  </div>
+                  <div class="input-group input-group--date">
+                    <label class="input-group__label" for="popupdate">DATE:
+                    </label><input class="input-group__input form-control input-date" type="text" placeholder="date" id="popupdate" name="popupdate" required="required" readonly="true"/>
                   </div>
                 </div>
-                <div class="dialog zoom-anim-dialog mfp-hide">
-                  <h1 class="dialog__el">Thank you! Our manager will contact you as soon as possible!
-                  </h1>
+                <div class="second-step" data-step="2" id="second-step">
+                  <div class="input-group">
+                    <label class="input-group__label" for="popupname">YOUR NAME:
+                    </label><input class="input-group__input form-control" type="text" required="required" id="popupname" placeholder="your name" name="popupname"/>
+                  </div>
+                  <div class="input-group">
+                    <label class="input-group__label" for="popuphear">HOW DID YOU HEAR ABOUT US:
+                    </label>
+                    <select class="select input form-control form-control--select" id="popuphear" required="required" name="popuphear">
+                      <option class="select__el" data-index="0" value="">---
+                      </option>
+                      <option class="select__el" data-index="1" value="1">Studio
+                      </option>
+                      <option class="select__el" data-index="2" value="2">1 bedroom
+                      </option>
+                      <option class="select__el" data-index="3" value="3">2 bedroom(small size,few items)
+                      </option>
+                      <option class="select__el" data-index="4" value="4">2 bedroom(avg. size, avg. items)
+                      </option>
+                      <option class="select__el" data-index="5" value="5">2 bedroom(large, many items)
+                      </option>
+                      <option class="select__el" data-index="6" value="6">3 bedroom(avg. size, avg. items)
+                      </option>
+                      <option class="select__el" data-index="7" value="7">3 bedroom(large, many items)
+                      </option>
+                      <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
+                      </option>
+                      <option class="select__el" data-index="9" value="">4 bedroom(large, many items)
+                      </option>
+                      <option class="select__el" data-index="10" value="">Commercial(avg. size, avg. items)
+                      </option>
+                      <option class="select__el" data-index="11" value="last">Commercial(large, many items)
+                      </option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <label class="input-group__label" for="popupphone">PHONE:
+                    </label><input class="input-group__input form-control" type="text" id="popupphone" required="required" placeholder="your phone" name="popupphone"/>
+                  </div>
+                  <div class="input-group">
+                    <label class="input-group__label" for="popupemail">EMAIL :
+                    </label><input class="input-group__input form-control" type="text" required="required" placeholder="your email" id="popupemail" name="popupemail"/>
+                  </div>
+                  <div class="input-group input-group--button"><input class="action-btn action-btn--submit" type="submit" value="get started"/>
+                  </div>
                 </div>
               </form>
+              <div class="dialog zoom-anim-dialog mfp-hide">
+                <h1 class="dialog__el">Thank you! Our manager will contact you as soon as possible!
+                </h1>
+              </div>
             </div>
             <div class="dialog zoom-anim-dialog mfp-hide" id="small-thanks">
               <h1 class="dialog__el">Thank you! Our manager will contact you as soon as possible!
@@ -466,27 +489,27 @@
           </div>
         </div>
       </div>
-      <div class="info container">
+      <div class="info container" id="about">
         <h2 class="info__title">Some Important Information About <span class="info__title--styled">Safederal</span>
         </h2>
         <div class="info-slider" id="info-slider">
-          <div class="img-wrapper"><img class="img-wrapper__img" src="../images/info-3.png" href="../images/info-3.png" alt="" role="presentation"/>
+          <div class="img-wrapper"><img class="img-wrapper__img" src="./images/info-3.png" href="./images/info-3.png" alt="" role="presentation"/>
           </div>
-          <div class="img-wrapper"><img class="img-wrapper__img" src="../images/info-2.png" href="../images/info-2.png" alt="" role="presentation"/>
+          <div class="img-wrapper"><img class="img-wrapper__img" src="./images/info-2.png" href="./images/info-2.png" alt="" role="presentation"/>
           </div>
-          <div class="img-wrapper"><img class="img-wrapper__img" src="../images/info-1.png" href="../images/info-1.png" alt="" role="presentation"/>
+          <div class="img-wrapper"><img class="img-wrapper__img" src="./images/info-1.png" href="./images/info-1.png" alt="" role="presentation"/>
           </div>
-          <div class="img-wrapper"><img class="img-wrapper__img" src="../images/info-3.png" href="../images/info-3.png" alt="" role="presentation"/>
+          <div class="img-wrapper"><img class="img-wrapper__img" src="./images/info-3.png" href="./images/info-3.png" alt="" role="presentation"/>
           </div>
-          <div class="img-wrapper"><img class="img-wrapper__img" src="../images/info-2.png" href="../images/info-2.png" alt="" role="presentation"/>
+          <div class="img-wrapper"><img class="img-wrapper__img" src="./images/info-2.png" href="./images/info-2.png" alt="" role="presentation"/>
           </div>
-          <div class="img-wrapper"><img class="img-wrapper__img" src="../images/info-1.png" href="../images/info-1.png" alt="" role="presentation"/>
+          <div class="img-wrapper"><img class="img-wrapper__img" src="./images/info-1.png" href="./images/info-1.png" alt="" role="presentation"/>
           </div>
-          <div class="img-wrapper"><img class="img-wrapper__img" src="../images/info-3.png" href="../images/info-3.png" alt="" role="presentation"/>
+          <div class="img-wrapper"><img class="img-wrapper__img" src="./images/info-3.png" href="./images/info-3.png" alt="" role="presentation"/>
           </div>
-          <div class="img-wrapper"><img class="img-wrapper__img" src="../images/info-2.png" href="../images/info-2.png" alt="" role="presentation"/>
+          <div class="img-wrapper"><img class="img-wrapper__img" src="./images/info-2.png" href="./images/info-2.png" alt="" role="presentation"/>
           </div>
-          <div class="img-wrapper"><img class="img-wrapper__img" src="../images/info-1.png" href="../images/info-1.png" alt="" role="presentation"/>
+          <div class="img-wrapper"><img class="img-wrapper__img" src="./images/info-1.png" href="./images/info-1.png" alt="" role="presentation"/>
           </div>
         </div>
         <div class="legend">
@@ -505,24 +528,24 @@
           <div class="feedback-slider center container clearfix" id="feedback-slider">
             <div class="item" id="0">
               <div class="item-header">
-                <div class="img-wrapper"><img src="../images/yelp.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/yelp.png" alt="" role="presentation"/>
                 </div>
               </div>
               <div class="content clearfix">
-                <div class="img-wrapper"><img src="../images/lizette.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/lizette.png" alt="" role="presentation"/>
                 </div>
                 <div class="pers-info">
                   <div class="pers-info__name">Lizette Cadrow
                   </div>
                   <div class="pers-info__date">29.03.2017
                   </div>
-                  <div class="rating"><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/>
+                  <div class="rating"><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/>
                   </div>
                 </div>
                 <div class="text">
                   <p class="text__content">Lorem ipsum Culpa velit cillum do eiusmod pariatur sit dolor labore velit Duis cillum dolore.
                   </p>
-                </div><a class="learn-more">show more</a>
+                </div><a class="learn-more">Read more</a>
               </div>
               <div class="item-footer">
                 <h2 class="title">Safederal / <span class="title--styled">Los Angeles</span>
@@ -531,18 +554,18 @@
             </div>
             <div class="item" id="0">
               <div class="item-header">
-                <div class="img-wrapper"><img src="../images/yelp.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/yelp.png" alt="" role="presentation"/>
                 </div>
               </div>
               <div class="content clearfix">
-                <div class="img-wrapper"><img src="../images/lizette.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/lizette.png" alt="" role="presentation"/>
                 </div>
                 <div class="pers-info">
                   <div class="pers-info__name">Lizette Cadrow
                   </div>
                   <div class="pers-info__date">29.03.2017
                   </div>
-                  <div class="rating"><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/>
+                  <div class="rating"><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/>
                   </div>
                 </div>
                 <div class="text">
@@ -552,7 +575,7 @@
                   </p>
                   <p class="text__content">Lorem ipsum Dolore cupidatat culpa consectetur quis laborum pariatur exercitation exercitation in do aute do ut dolore.
                   </p>
-                </div><a class="learn-more">show more</a>
+                </div><a class="learn-more">Read more</a>
               </div>
               <div class="item-footer">
                 <h2 class="title">Safederal / <span class="title--styled">Los Angeles</span>
@@ -561,18 +584,18 @@
             </div>
             <div class="item" id="0">
               <div class="item-header">
-                <div class="img-wrapper"><img src="../images/yelp.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/yelp.png" alt="" role="presentation"/>
                 </div>
               </div>
               <div class="content clearfix">
-                <div class="img-wrapper"><img src="../images/lizette.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/lizette.png" alt="" role="presentation"/>
                 </div>
                 <div class="pers-info">
                   <div class="pers-info__name">Lizette Cadrow
                   </div>
                   <div class="pers-info__date">29.03.2017
                   </div>
-                  <div class="rating"><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/>
+                  <div class="rating"><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/>
                   </div>
                 </div>
                 <div class="text">
@@ -582,7 +605,7 @@
                   </p>
                   <p class="text__content">Lorem ipsum Dolore cupidatat culpa consectetur quis laborum pariatur exercitation exercitation in do aute do ut dolore.
                   </p>
-                </div><a class="learn-more">show more</a>
+                </div><a class="learn-more">Read more</a>
               </div>
               <div class="item-footer">
                 <h2 class="title">Safederal / <span class="title--styled">Los Angeles</span>
@@ -591,24 +614,24 @@
             </div>
             <div class="item" id="1">
               <div class="item-header">
-                <div class="img-wrapper"><img src="../images/yelp.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/yelp.png" alt="" role="presentation"/>
                 </div>
               </div>
               <div class="content clearfix">
-                <div class="img-wrapper"><img src="../images/lizette.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/lizette.png" alt="" role="presentation"/>
                 </div>
                 <div class="pers-info">
                   <div class="pers-info__name">Lizette Cadrow
                   </div>
                   <div class="pers-info__date">29.03.2017
                   </div>
-                  <div class="rating"><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/>
+                  <div class="rating"><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/>
                   </div>
                 </div>
                 <div class="text">
                   <p class="text__content">Lorem ipsum Culpa velit cillum do eiusmod pariatur sit dolor labore velit Duis cillum dolore.
                   </p>
-                </div><a class="learn-more">show more</a>
+                </div><a class="learn-more">Read more</a>
               </div>
               <div class="item-footer">
                 <h2 class="title">Safederal / <span class="title--styled">Los Angeles</span>
@@ -617,18 +640,18 @@
             </div>
             <div class="item" id="1">
               <div class="item-header">
-                <div class="img-wrapper"><img src="../images/yelp.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/yelp.png" alt="" role="presentation"/>
                 </div>
               </div>
               <div class="content clearfix">
-                <div class="img-wrapper"><img src="../images/lizette.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/lizette.png" alt="" role="presentation"/>
                 </div>
                 <div class="pers-info">
                   <div class="pers-info__name">Lizette Cadrow
                   </div>
                   <div class="pers-info__date">29.03.2017
                   </div>
-                  <div class="rating"><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/>
+                  <div class="rating"><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/>
                   </div>
                 </div>
                 <div class="text">
@@ -638,7 +661,7 @@
                   </p>
                   <p class="text__content">Lorem ipsum Dolore cupidatat culpa consectetur quis laborum pariatur exercitation exercitation in do aute do ut dolore.
                   </p>
-                </div><a class="learn-more">show more</a>
+                </div><a class="learn-more">Read more</a>
               </div>
               <div class="item-footer">
                 <h2 class="title">Safederal / <span class="title--styled">Los Angeles</span>
@@ -647,18 +670,18 @@
             </div>
             <div class="item" id="1">
               <div class="item-header">
-                <div class="img-wrapper"><img src="../images/yelp.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/yelp.png" alt="" role="presentation"/>
                 </div>
               </div>
               <div class="content clearfix">
-                <div class="img-wrapper"><img src="../images/lizette.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/lizette.png" alt="" role="presentation"/>
                 </div>
                 <div class="pers-info">
                   <div class="pers-info__name">Lizette Cadrow
                   </div>
                   <div class="pers-info__date">29.03.2017
                   </div>
-                  <div class="rating"><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/>
+                  <div class="rating"><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/>
                   </div>
                 </div>
                 <div class="text">
@@ -668,7 +691,7 @@
                   </p>
                   <p class="text__content">Lorem ipsum Dolore cupidatat culpa consectetur quis laborum pariatur exercitation exercitation in do aute do ut dolore.
                   </p>
-                </div><a class="learn-more">show more</a>
+                </div><a class="learn-more">Read more</a>
               </div>
               <div class="item-footer">
                 <h2 class="title">Safederal / <span class="title--styled">Los Angeles</span>
@@ -677,24 +700,24 @@
             </div>
             <div class="item" id="2">
               <div class="item-header">
-                <div class="img-wrapper"><img src="../images/yelp.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/yelp.png" alt="" role="presentation"/>
                 </div>
               </div>
               <div class="content clearfix">
-                <div class="img-wrapper"><img src="../images/lizette.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/lizette.png" alt="" role="presentation"/>
                 </div>
                 <div class="pers-info">
                   <div class="pers-info__name">Lizette Cadrow
                   </div>
                   <div class="pers-info__date">29.03.2017
                   </div>
-                  <div class="rating"><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/>
+                  <div class="rating"><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/>
                   </div>
                 </div>
                 <div class="text">
                   <p class="text__content">Lorem ipsum Culpa velit cillum do eiusmod pariatur sit dolor labore velit Duis cillum dolore.
                   </p>
-                </div><a class="learn-more">show more</a>
+                </div><a class="learn-more">Read more</a>
               </div>
               <div class="item-footer">
                 <h2 class="title">Safederal / <span class="title--styled">Los Angeles</span>
@@ -703,18 +726,18 @@
             </div>
             <div class="item" id="2">
               <div class="item-header">
-                <div class="img-wrapper"><img src="../images/yelp.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/yelp.png" alt="" role="presentation"/>
                 </div>
               </div>
               <div class="content clearfix">
-                <div class="img-wrapper"><img src="../images/lizette.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/lizette.png" alt="" role="presentation"/>
                 </div>
                 <div class="pers-info">
                   <div class="pers-info__name">Lizette Cadrow
                   </div>
                   <div class="pers-info__date">29.03.2017
                   </div>
-                  <div class="rating"><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/>
+                  <div class="rating"><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/>
                   </div>
                 </div>
                 <div class="text">
@@ -724,7 +747,7 @@
                   </p>
                   <p class="text__content">Lorem ipsum Dolore cupidatat culpa consectetur quis laborum pariatur exercitation exercitation in do aute do ut dolore.
                   </p>
-                </div><a class="learn-more">show more</a>
+                </div><a class="learn-more">Read more</a>
               </div>
               <div class="item-footer">
                 <h2 class="title">Safederal / <span class="title--styled">Los Angeles</span>
@@ -733,18 +756,18 @@
             </div>
             <div class="item" id="2">
               <div class="item-header">
-                <div class="img-wrapper"><img src="../images/yelp.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/yelp.png" alt="" role="presentation"/>
                 </div>
               </div>
               <div class="content clearfix">
-                <div class="img-wrapper"><img src="../images/lizette.png" alt="" role="presentation"/>
+                <div class="img-wrapper"><img class="img-wrapper__img" src="./images/lizette.png" alt="" role="presentation"/>
                 </div>
                 <div class="pers-info">
                   <div class="pers-info__name">Lizette Cadrow
                   </div>
                   <div class="pers-info__date">29.03.2017
                   </div>
-                  <div class="rating"><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/><img class="rating__star" src="../images/star.png" alt="" role="presentation"/>
+                  <div class="rating"><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/><img class="rating__star" src="./images/star.png" alt="" role="presentation"/>
                   </div>
                 </div>
                 <div class="text">
@@ -754,7 +777,7 @@
                   </p>
                   <p class="text__content">Lorem ipsum Dolore cupidatat culpa consectetur quis laborum pariatur exercitation exercitation in do aute do ut dolore.
                   </p>
-                </div><a class="learn-more">show more</a>
+                </div><a class="learn-more">Read more</a>
               </div>
               <div class="item-footer">
                 <h2 class="title">Safederal / <span class="title--styled">Los Angeles</span>
@@ -764,23 +787,114 @@
           </div>
         </div>
       </div>
+      <div class="faq container" id="faq">
+        <div class="wrapper-inner">
+          <div class="faq__content">
+            <div class="naming">Frequently Asked Questions</div>
+            <div class="faq__block clearfix">
+              <div class="faq__qw">What type and size of moves does NJ local moving do? Do you do dull service moving and packing?<span class="icon-toggle-wrapper"> <span class="icon-toggle-wrapper__text">Read the answer</span><span class="icon-toggle-wrapper__icon icon-toggle"> </span></span><span class="icon-close-wrapper"> <span class="icon-close-wrapper__text">Close the answer</span><span class="icon-close-wrapper__icon icon-close"></span></span>
+              </div>
+              <div class="faq__answer">
+                <div class="faq__text">We are a full service moving company. We can do any size of move either locally or across the state of California. Your large home, small apartment, artist or work studio, home office, retail storefront, storage unit, commercial or medical office – we have extensive experience with all types of moves. No job is too big or too small.</div>
+              </div>
+            </div>
+            <div class="faq__block clearfix">
+              <div class="faq__qw">What type and size of moves does NJ local moving do? Do you do dull service moving and packing?<span class="icon-toggle-wrapper"> <span class="icon-toggle-wrapper__text">Read the answer</span><span class="icon-toggle-wrapper__icon icon-toggle"> </span></span><span class="icon-close-wrapper"> <span class="icon-close-wrapper__text">Close the answer</span><span class="icon-close-wrapper__icon icon-close"></span></span>
+              </div>
+              <div class="faq__answer">
+                <div class="faq__text">We are a full service moving company. We can do any size of move either locally or across the state of California. Your large home, small apartment, artist or work studio, home office, retail storefront, storage unit, commercial or medical office – we have extensive experience with all types of moves. No job is too big or too small.</div>
+              </div>
+            </div>
+            <div class="faq__block clearfix">
+              <div class="faq__qw">What type and size of moves does NJ local moving do? Do you do dull service moving and packing?<span class="icon-toggle-wrapper"> <span class="icon-toggle-wrapper__text">Read the answer</span><span class="icon-toggle-wrapper__icon icon-toggle"> </span></span><span class="icon-close-wrapper"> <span class="icon-close-wrapper__text">Close the answer</span><span class="icon-close-wrapper__icon icon-close"></span></span>
+              </div>
+              <div class="faq__answer">
+                <div class="faq__text">We are a full service moving company. We can do any size of move either locally or across the state of California. Your large home, small apartment, artist or work studio, home office, retail storefront, storage unit, commercial or medical office – we have extensive experience with all types of moves. No job is too big or too small.</div>
+              </div>
+            </div>
+            <div class="faq__block clearfix">
+              <div class="faq__qw">What type and size of moves does NJ local moving do? Do you do dull service moving and packing?<span class="icon-toggle-wrapper"> <span class="icon-toggle-wrapper__text">Read the answer</span><span class="icon-toggle-wrapper__icon icon-toggle"> </span></span><span class="icon-close-wrapper"> <span class="icon-close-wrapper__text">Close the answer</span><span class="icon-close-wrapper__icon icon-close"></span></span>
+              </div>
+              <div class="faq__answer">
+                <div class="faq__text">We are a full service moving company. We can do any size of move either locally or across the state of California. Your large home, small apartment, artist or work studio, home office, retail storefront, storage unit, commercial or medical office – we have extensive experience with all types of moves. No job is too big or too small.</div>
+              </div>
+            </div>
+            <div class="faq__block clearfix">
+              <div class="faq__qw">What type and size of moves does NJ local moving do? Do you do dull service moving and packing?<span class="icon-toggle-wrapper"> <span class="icon-toggle-wrapper__text">Read the answer</span><span class="icon-toggle-wrapper__icon icon-toggle"> </span></span><span class="icon-close-wrapper"> <span class="icon-close-wrapper__text">Close the answer</span><span class="icon-close-wrapper__icon icon-close"></span></span>
+              </div>
+              <div class="faq__answer">
+                <div class="faq__text">We are a full service moving company. We can do any size of move either locally or across the state of California. Your large home, small apartment, artist or work studio, home office, retail storefront, storage unit, commercial or medical office – we have extensive experience with all types of moves. No job is too big or too small.</div>
+              </div>
+            </div>
+            <div class="faq__block clearfix">
+              <div class="faq__qw">What type and size of moves does NJ local moving do? Do you do dull service moving and packing?<span class="icon-toggle-wrapper"> <span class="icon-toggle-wrapper__text">Read the answer</span><span class="icon-toggle-wrapper__icon icon-toggle"> </span></span><span class="icon-close-wrapper"> <span class="icon-close-wrapper__text">Close the answer</span><span class="icon-close-wrapper__icon icon-close"></span></span>
+              </div>
+              <div class="faq__answer">
+                <div class="faq__text">We are a full service moving company. We can do any size of move either locally or across the state of California. Your large home, small apartment, artist or work studio, home office, retail storefront, storage unit, commercial or medical office – we have extensive experience with all types of moves. No job is too big or too small.</div>
+              </div>
+            </div>
+            <div class="faq__block clearfix">
+              <div class="faq__qw">What type and size of moves does NJ local moving do? Do you do dull service moving and packing?<span class="icon-toggle-wrapper"> <span class="icon-toggle-wrapper__text">Read the answer</span><span class="icon-toggle-wrapper__icon icon-toggle"> </span></span><span class="icon-close-wrapper"> <span class="icon-close-wrapper__text">Close the answer</span><span class="icon-close-wrapper__icon icon-close"></span></span>
+              </div>
+              <div class="faq__answer">
+                <div class="faq__text">We are a full service moving company. We can do any size of move either locally or across the state of California. Your large home, small apartment, artist or work studio, home office, retail storefront, storage unit, commercial or medical office – we have extensive experience with all types of moves. No job is too big or too small.</div>
+              </div>
+            </div>
+            <div class="faq__block clearfix">
+              <div class="faq__qw">What type and size of moves does NJ local moving do? Do you do dull service moving and packing?<span class="icon-toggle-wrapper"> <span class="icon-toggle-wrapper__text">Read the answer</span><span class="icon-toggle-wrapper__icon icon-toggle"> </span></span><span class="icon-close-wrapper"> <span class="icon-close-wrapper__text">Close the answer</span><span class="icon-close-wrapper__icon icon-close"></span></span>
+              </div>
+              <div class="faq__answer">
+                <div class="faq__text">We are a full service moving company. We can do any size of move either locally or across the state of California. Your large home, small apartment, artist or work studio, home office, retail storefront, storage unit, commercial or medical office – we have extensive experience with all types of moves. No job is too big or too small.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container form-container clearfix">
+          <form class="stay-in-touch" id="stay-in-touch" method="get" action="">
+            <fieldset class="fieldset">
+              <h2 class="fieldset__title">Keep in Touch
+              </h2>
+              <h3 class="fieldset__subtitle">If you have any question, please contact us
+              </h3>
+              <div class="form-control">
+                <label class="form-control__label" for="stayname">Name
+                </label><input class="form-control__form-input" id="stayname" name="name" minlength="2" type="text"/>
+              </div>
+              <div class="form-control">
+                <label class="form-control__label" for="staycontact">Email / Phone
+                </label><input class="form-control__form-input" id="staycontact" type="text" name="staycontact" required="required"/>
+              </div>
+              <div class="form-control form-control--textarea">
+                <label class="form-control__label" for="stayquestion">Your question
+                </label><textarea class="form-control__form-input" id="stayquestion" name="stayquestion"></textarea>
+              </div>
+              <div class="form-control clearfix"><input class="form-control__form-submit submit" type="submit" value="Ask the question"/>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="map container-fluid">
+        <div class="container-fluid form-wrapper"></div>
+        <div id="map" data-center="{&quot;lat&quot;:-34.397,&quot;lng&quot;:150.644}"></div>
+      </div>
       <div class="container-fluid footer-wrapper" id="contacts">
         <div class="container footer clearfix">
-          <div class="logo-wrapper"><a class="img-wrapper" href="/"></a><span class="logo-wrapper__copyright">&copy; A2B movers 2017</span>
+          <div class="logo"><a class="img-wrapper" href="#top-form"><img class="img-wrapper__img" src="./images/logo.png" alt="" role="presentation"/></a><span class="logo__copyright">&copy; Safederal 2017</span>
           </div>
-          <div class="info-wrap"> <span class="info-wrap__el">Contacts</span><a class="info-wrap__phone" href="tel:(333)777-3333"> <span class="tel">(333) 777-3333</span></a><span class="info-wrap__time-open">every day 8 A.M.- 8 P.M.</span><a class="info-wrap__mail" href="mailto:support@njlocal.com">support@njlocal.com</a>
+          <div class="info-wrap"> <span class="info-wrap__el">Contacts</span><a class="info-wrap__phone" href="tel:(333)777-3333"> <span class="tel">(333) 777-3333</span></a><span class="info-wrap__time-open">every day 8 A.M.- 8 P.M.</span><a class="info-wrap__mail" href="mailto:support@njlocal.com">info@safederal.com</a>
           </div>
           <div class="socials clearfix">
             <div class="social"><span class="social__icon icon-fb"></span><a class="social__link link--facebook" href="">facebook</a>
             </div>
-            <div class="social"><span class="social__icon icon-tw"></span><a class="social__link link--twitter" href="">twitter</a>
+            <div class="social"><span class="social__icon icon-twitter"></span><a class="social__link link--twitter" href="">twitter</a>
             </div>
             <div class="social"><span class="social__icon icon-g"></span><a class="social__link link--google-plus" href="">google plus</a>
             </div>
-            <div class="social"><span class="social__icon icon-inst"></span><a class="social__link link--instagram" href="">instagram</a>
+            <div class="social"><span class="social__icon icon-instagram"></span><a class="social__link link--instagram" href="">instagram</a>
             </div>
           </div>
-          <div class="developed-by"><a class="href" href="http://webcase.studio/en/" target="_blank"><span class="href__text">Developed by </span></a>
+          <div class="developed-by"><span class="text">Developed by <a class="href" href="http://webcase.studio/en/" target="_blank"><img class="href__img" src="./images/webcase.png" alt="" role="presentation"/></a></span>
           </div>
         </div>
       </div>
