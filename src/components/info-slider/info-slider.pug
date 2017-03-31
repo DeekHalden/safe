@@ -1,5 +1,8 @@
 -var data = [{src:'./images/info-3.png'},{src:'./images/info-2.png'},{src:'./images/info-1.png'},{src:'./images/info-3.png'},{src:'./images/info-2.png'},{src:'./images/info-1.png'},{src:'./images/info-3.png'},{src:'./images/info-2.png'},{src:'./images/info-1.png'}]
 +b.info-slider#info-slider
     each el, i in data
-        +b.img-wrapper
-            +e.IMG(src=el.src).img
+        +b.A(href="#image-1").img-wrapper.popup-with-zoom-anim
+            +e.IMG(src=el.src ).img
++b.popup(id="image-1").zoom-anim-dialog.mfp-hide.dialog
+    +b.img-wrapper
+        +e.IMG(src=data[0].src).img

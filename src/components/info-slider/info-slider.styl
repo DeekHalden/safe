@@ -26,16 +26,46 @@
         background url('../images/right.png') no-repeat center center
         
     .img-wrapper
-        width 381px 
+        width 370px 
         overflow hidden
         height 100%
-        cursor grab
-        
+        cursor pointer
+        display block
+        position relative
+        &:after
+            content ''
+            background url('../images/magnify.png') no-repeat center
+            width 40px
+            height 40px
+            visibility hidden
+            top 50%
+            left 50%
+            position absolute
+            z-index 55551233213
+            transform translate(-50%, -55%) 
         &:nth-child(2n + 2)
             margin 0 12.5px
         &__img
             width 100%
             height auto
+        &:hover:after
+            visibility visible
+            
+.dialog.popup
+    max-width 1180px
+    padding 30px
+    margin 0 auto
+    .img-wrapper
+        width 100% 
+        height auto 
+        &__img
+            width 100%
+            height auto
+            
+            
+        
+    
+    
 @media(max-width 1199px)
     .info-slider
         .img-wrapper

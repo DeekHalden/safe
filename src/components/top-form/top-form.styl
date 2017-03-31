@@ -38,6 +38,10 @@
         float left
         margin 10px 1%
         position relative
+        &:nth-child(2n+2)
+            margin-right 0
+            margin-left 2%
+            
         &--date
             &:after
                 position absolute
@@ -126,6 +130,10 @@
         padding-right 10px
         float none
         margin 0 auto
+        .input-group
+            &:nth-child(2n+2)
+                margin-left 1%
+                margin-right 1%
 @media(max-width 720px)
     .top-form
         width 300px

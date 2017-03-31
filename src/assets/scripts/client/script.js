@@ -38,7 +38,7 @@ $(document).ready(function() {
     $('.popup-with-zoom-anim').magnificPopup({
         type: 'inline',
 
-        fixedContentPos: false,
+        fixedContentPos: true,
         fixedBgPos: true,
 
         overflowY: 'auto',
@@ -76,7 +76,7 @@ $(document).ready(function() {
     $('.badge--more').magnificPopup({
         type: 'inline',
 
-        fixedContentPos: false,
+        fixedContentPos: true,
         fixedBgPos: true,
 
         overflowY: 'auto',
@@ -109,7 +109,9 @@ $(document).ready(function() {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
+        swipeToSlide: false,
         variableWidth: true,
+        draggable: false,
         adaptiveHeight: true,
         responsive: [{
                 breakpoint: 960,
@@ -140,7 +142,7 @@ $(document).ready(function() {
         }
     });
 
-    
+
 
     $('.item .learn-more').on('click', function() {
         var text = 'Read more';
@@ -175,7 +177,17 @@ $(document).ready(function() {
     });
 
     // form validation
-    $('.input-date').pickadate();
+    var $input = $('.input-date').pickadate();
+    var picker = $input.pickadate('picker');
+    picker.on({
+        open: function() { 
+            console.log(1);
+            $('.header').css('padding-right', getScrollBarWidth() + "px"); 
+        },
+        close: function() { 
+            $('.header').css('padding-right', 0); 
+        }
+    })
 
     $(".phone-number").keydown(function(e) {
         e.stopPropagation();
@@ -251,9 +263,9 @@ $(document).ready(function() {
         console.log(currdate, dateObject);
         return this.optional(element) || (currdate.setHours(0, 0, 0, 0) >= dateObject.setHours(0, 0, 0, 0) || currdate === 0);
     });
-     $.validator.addMethod("usPhone", function(value, element) {
+    $.validator.addMethod("usPhone", function(value, element) {
         isPhone = (this.optional(element) || /^\d+$/.test(value)) && this.getLength($.trim(value), element) === 10;
-        
+
 
         return isPhone;
 
@@ -263,27 +275,27 @@ $(document).ready(function() {
     var inputs = $('#top-form #to, #top-form #from, #top-form #size, #top-form #date');
     $('#top-form .input-group .action-btn--next').click(function(e) {
         e.preventDefault();
-        if(inputs.valid() == true ) {
+        if (inputs.valid() == true) {
             $('#top-form .second-step').show();
             $('#top-form .first-step').hide();
-            
+
             console.log(1)
             $('#top-form .input-group .action-btn--submit').show();
             $('#top-form .input-group .action-btn--next').hide();
             $('#top-form .input-group .action-btn--prev').show();
         } else {
-            
+
             console.log(0)
         }
     });
     $('#top-form .input-group .action-btn--prev').click(function(e) {
-            $('#top-form .first-step').show();
-            $('#top-form .second-step').hide();
-            $('#top-form .input-group .action-btn--submit').hide();
-            $('#top-form .input-group .action-btn--next').show();
-            $('#top-form .input-group .action-btn--prev').hide();                
-    }); 
-    
+        $('#top-form .first-step').show();
+        $('#top-form .second-step').hide();
+        $('#top-form .input-group .action-btn--submit').hide();
+        $('#top-form .input-group .action-btn--next').show();
+        $('#top-form .input-group .action-btn--prev').hide();
+    });
+
     $('#top-form').validate({
         rules: {
             name: {
@@ -293,7 +305,7 @@ $(document).ready(function() {
                 dateValidate: true
             },
             email: {
-                email: true  
+                email: true
             },
             phone: {
                 usPhone: true
@@ -307,7 +319,7 @@ $(document).ready(function() {
         // }
     });
 
-    
+
     $('#popup-form').validate({
         rules: {
             popupname: {
@@ -317,7 +329,7 @@ $(document).ready(function() {
                 dateValidate: true
             },
             popupemail: {
-                email: true  
+                email: true
             },
             popupphone: {
                 usPhone: true
@@ -326,24 +338,25 @@ $(document).ready(function() {
         messages: {
             popupname: 'Invalid name',
             popupdate: 'Invalid date',
-            popupphone: 'Invalid phone'
+            popupphone: 'Invalid phone',
+            popupemail: 'Please enter a valid email'
         }
         // }
     });
-    
+
 });
 
-    
 
 
 
-   
+
+
 
 
 
 // smooth scrolling
 
-$(document).on('click', '.nav__el, .footer-nav__el, .logo a',  function(event) {
+$(document).on('click', '.nav__el, .footer-nav__el, .logo a', function(event) {
     event.preventDefault();
     if ($(window).width() < 720) {
 
