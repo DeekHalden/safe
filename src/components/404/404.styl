@@ -1,12 +1,20 @@
 .wrapper-404
-    height 100vh
-    min-height 1000px
-    background #fff
+    // background-size cover
+    // height 100vh
+    // min-height 1000px
     .footer-wrapper
         position absolute
         bottom 0
         left 0
         z-index 5
+.not-found-container
+    margin-top 110px
+    height 100vh
+    min-height 560px
+    
+    
+    background url('./../images/couple-404.png') no-repeat center
+    background-size cover
 
 .not-found-wrapper
     position absolute
@@ -14,8 +22,6 @@
     transform translateX(-50%)
     top 0
     bottom 0
-    background #fff
-    padding 150px 30px 150px
     .img-wrapper
         display inline-block
         &__img
@@ -25,16 +31,18 @@
         vertical-align top
         display inline-block
         text-align left
-        color #2a3f48
+        color $blue
         margin-top 40px
         margin-right 70px
-        &__title
-            margin-left -5px
-            font-size 90px
-            font-family Montserrat-Black
+        .title
+            font-size 106px
+            font-family TitilliumWeb-Thin
+            &__styled
+                font-family TitilliumWeb-Regular
+                
         &__subtitle
             font-size 28px
-            font-family Montserrat-ExtraLight
+            font-family TitilliumWeb-Regular
             text-transform uppercase
         .btn-group
             display inline-block
@@ -45,49 +53,58 @@
                 display inline-block
                 color #fff
                 border-radius 5px
-                font-family Montserrat-Bold
+                font-family TitilliumWeb-Bold
                 font-size 15px
                 width 191px
                 padding 15px 0
                 text-decoration none
                 & + .btn-group__btn 
                     margin-left 27px
-                &:hover
-                    text-decoration underline
                 &--home
-                    background-color #f57c24
+                    background-color $red
                     &:hover
-                        background-color #ef6400
+                        background-color #ff0c00
                         
                 &--contact
-                    background-color #25a937
+                    background-color $blue
                     &:hover
-                        background-color #219430
+                        background-color #0014ff
 @media(max-width 1199px)
-    .wrapper-404
-        min-height 800px
+    .not-found-container
+        background-position 65% center
+        margin-top 50px
     .not-found-wrapper
         padding 100px 0 0px
         .text
             margin-top 70px
             margin-right 0
             text-align center
-            &__title
+            .title
                 font-size 35px
             &__subtitle
                 font-size 18px
             
     
 @media(max-width 960px)
-    .wrapper-404
-        min-height 1000px
     .not-found-wrapper
-        text-align center
         .text
             margin-top 20px
+            .title, &__subtitle
+                text-shadow 0 1px $red
+@media(max-width 720px)
+    .not-found-wrapper
+        padding-top 150px
+    .not-found-container
+        background none
+        
+        .text
+            display block
+            margin 0 auto
 @media(max-width 480px)
+    .not-found-container
+        height auto
     .wrapper-404
-        min-height 1000px
+        min-height 650px
     .not-found-wrapper
         padding-top 40px
         .text

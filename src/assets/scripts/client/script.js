@@ -57,7 +57,7 @@ $(document).ready(function() {
     $('.badge--less').magnificPopup({
         type: 'inline',
 
-        // fixedContentPos: true,
+        fixedContentPos: true,
         fixedBgPos: true,
 
         overflowY: 'auto',
@@ -110,6 +110,7 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 3,
         variableWidth: true,
+        adaptiveHeight: true,
         responsive: [{
                 breakpoint: 960,
                 settings: {
@@ -174,15 +175,52 @@ $(document).ready(function() {
     });
 
     // form validation
-    $('.input-date').datepicker();
+    $('.input-date').pickadate();
+
+    $(".phone-number").keydown(function(e) {
+        e.stopPropagation();
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+            // Allow: Ctrl/cmd+A
+            (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+            // Allow: Ctrl/cmd+C
+            (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+            // Allow: Ctrl/cmd+X
+            (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+            // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+            // let it happen, don't do anything
+            return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+
+    $('.phone-number').on('keydown keyup', function(e) {
+        var max = 10;
+        if (e.which < 0x20) {
+            // e.which < 0x20, then it's not a printable character
+            // e.which === 0 - Not a character
+            return; // Do nothing
+        }
+        if (this.value.length == max) {
+            e.preventDefault();
+        } else if (this.value.length > max) {
+            // Maximum exceeded
+            this.value = this.value.substring(0, max);
+        }
+    })
 
     $.validator.addMethod("eitherEmailPhone", function(value, element) {
-        isPhone = (this.optional(element) || /^\d+$/.test(value)) && this.getLength($.trim(value), element) <= 12 && this.getLength($.trim(value), element) >= 11;
+        isPhone = (this.optional(element) || /^\d+$/.test(value)) && this.getLength($.trim(value), element) === 10;
         isEmail = this.optional(element) || /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i.test(value);
 
         return isPhone || isEmail;
 
     }, "Please enter either phone or e-mail");
+
 
     $("#stay-in-touch").validate({
         debug: true,
@@ -208,9 +246,43 @@ $(document).ready(function() {
     });
     $.validator.addMethod("dateValidate", function(value, element) {
         var currdate = new Date($('.input-date').val());
+
         var dateObject = new Date();
+        console.log(currdate, dateObject);
         return this.optional(element) || (currdate.setHours(0, 0, 0, 0) >= dateObject.setHours(0, 0, 0, 0) || currdate === 0);
     });
+     $.validator.addMethod("usPhone", function(value, element) {
+        isPhone = (this.optional(element) || /^\d+$/.test(value)) && this.getLength($.trim(value), element) === 10;
+        
+
+        return isPhone;
+
+    }, "Please enter valid phone");
+
+
+    var inputs = $('#top-form #to, #top-form #from, #top-form #size, #top-form #date');
+    $('#top-form .input-group .action-btn--next').click(function(e) {
+        e.preventDefault();
+        if(inputs.valid() == true ) {
+            $('#top-form .second-step').show();
+            $('#top-form .first-step').hide();
+            
+            console.log(1)
+            $('#top-form .input-group .action-btn--submit').show();
+            $('#top-form .input-group .action-btn--next').hide();
+            $('#top-form .input-group .action-btn--prev').show();
+        } else {
+            
+            console.log(0)
+        }
+    });
+    $('#top-form .input-group .action-btn--prev').click(function(e) {
+            $('#top-form .first-step').show();
+            $('#top-form .second-step').hide();
+            $('#top-form .input-group .action-btn--submit').hide();
+            $('#top-form .input-group .action-btn--next').show();
+            $('#top-form .input-group .action-btn--prev').hide();                
+    }); 
     
     $('#top-form').validate({
         rules: {
@@ -224,15 +296,18 @@ $(document).ready(function() {
                 email: true  
             },
             phone: {
-                phoneUS: true
+                usPhone: true
             }
         },
         messages: {
             name: 'Invalid name',
-            date: 'Invalid date'
+            date: 'Invalid date',
+            phone: 'Invalid phone'
         }
         // }
     });
+
+    
     $('#popup-form').validate({
         rules: {
             popupname: {
@@ -245,7 +320,7 @@ $(document).ready(function() {
                 email: true  
             },
             popupphone: {
-                phoneUS: true
+                usPhone: true
             }
         },
         messages: {
@@ -255,29 +330,7 @@ $(document).ready(function() {
         }
         // }
     });
-    var inputs = $('#top-form #to, #top-form #from, #top-form #size, #top-form #date');
-    $('#top-form .input-group .action-btn--next').click(function(e) {
-        e.preventDefault();
-        if(inputs.valid() == true ) {
-            $('.second-step').show();
-            $('.first-step').hide();
-            
-            console.log(1)
-            $('#top-form .input-group .action-btn--submit').show();
-            $('#top-form .input-group .action-btn--next').hide();
-            $('#top-form .input-group .action-btn--prev').show();
-        } else {
-            
-            console.log(0)
-        }
-    });
-    $('#top-form .input-group .action-btn--prev').click(function(e) {
-            $('.first-step').show();
-            $('.second-step').hide();
-            $('#top-form .input-group .action-btn--submit').hide();
-            $('#top-form .input-group .action-btn--next').show();
-            $('#top-form .input-group .action-btn--prev').hide();                
-    });
+    
 });
 
     

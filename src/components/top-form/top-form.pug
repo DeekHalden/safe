@@ -1,6 +1,6 @@
 +b.FORM(action="").top-form.clearfix#top-form
     +e.H2.title REQUEST <br>A QUOTE NOW
-    +b.first-step(data-step="1")#first-step
+    +b.first-step(data-step="1")#first-step.clearfix
         +b.input-group
             +e.LABEL.label(for="from") FROM:
             +e.INPUT(type="text" id="from" placeholder="city of zip code" name="from" required).input.form-control
@@ -24,8 +24,8 @@
                 +e.OPTION.el(data-index="11" value="last") Commercial(large, many items)
         +b.input-group.input-group--date
             +e.LABEL.label(for="date") DATE:
-            +e.INPUT(type="text"  placeholder="date" id="date" name="date" required readonly="true").input.form-control.input-date
-    +b.second-step(data-step="2")#second-step
+            +e.INPUT(type="text" placeholder="date" id="date" name="date" required readonly="true").input.form-control.input-date
+    +b.second-step(data-step="2")#second-step.clearfix
         +b.input-group
             +e.LABEL.label(for="name") YOUR NAME:
             +e.INPUT(type="text" required id="name" placeholder="your name" name="name").input.form-control
@@ -46,7 +46,7 @@
                 +e.OPTION.el(data-index="11" value="last") Commercial(large, many items)
         +b.input-group
             +e.LABEL.label(for="phone" ) PHONE:
-            +e.INPUT(type="text" id="phone" required placeholder="your phone" name="phone").input.form-control
+            +e.INPUT(type="text" id="phone" required placeholder="your phone" name="phone").input.form-control.phone-number
         +b.input-group
             +e.LABEL.label(for="email") EMAIL :
             +e.INPUT(type="text" required  placeholder="your email" id="email"  name="email").input.form-control 

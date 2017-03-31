@@ -5,7 +5,7 @@
         font-size 0
         position absolute
         top 40%
-        top calc(50% - 21.5px)
+        // top calc(50% - 21.5px)
         z-index 10
         background-color transparent
         border none
@@ -22,19 +22,18 @@
     
     .slick-next
         right 0px
+         
         background url('../images/right.png') no-repeat center center
         
     .img-wrapper
-        width 365px 
+        width 381px 
         overflow hidden
         height 100%
         cursor grab
+        
         &:nth-child(2n + 2)
-            margin 0 16px
+            margin 0 12.5px
         &__img
-            position relative
-            left 50%
-            transform translateX(-50%)
             width 100%
             height auto
 @media(max-width 1199px)
@@ -49,3 +48,7 @@
     .info-slider
         .img-wrapper
             width 400px
+@media(max-width 480px)
+    .info-slider
+        .img-wrapper
+            width 267px
