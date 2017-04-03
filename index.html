@@ -47,7 +47,7 @@
                 <label class="input-group__label" for="to">TO:
                 </label><input class="input-group__input form-control" type="text" id="to" placeholder="city of zip code" name="to" required="required"/>
               </div>
-              <div class="input-group">
+              <div class="input-group input-group--select">
                 <label class="input-group__label" for="size">HOME SIZE:
                 </label>
                 <select class="select input form-control form-control--select" id="size" name="size" required="required">
@@ -69,10 +69,6 @@
                   </option>
                   <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
                   </option>
-                  <option class="select__el" data-index="9" value="">4 bedroom(large, many items)
-                  </option>
-                  <option class="select__el" data-index="10" value="">Commercial(avg. size, avg. items)
-                  </option>
                   <option class="select__el" data-index="11" value="last">Commercial(large, many items)
                   </option>
                 </select>
@@ -85,12 +81,12 @@
             <div class="second-step clearfix" data-step="2" id="second-step">
               <div class="input-group">
                 <label class="input-group__label" for="name">YOUR NAME:
-                </label><input class="input-group__input form-control" type="text" required="required" id="name" placeholder="your name" name="name"/>
+                </label><input class="input-group__input form-control form-control--select" type="text" required="required" id="name" placeholder="your name" name="name"/>
               </div>
-              <div class="input-group">
+              <div class="input-group input-group--select">
                 <label class="input-group__label" for="hear">HOW DID YOU HEAR ABOUT US:
                 </label>
-                <select class="select input form-control form-control--select" id="hear" required="required" name="hear">
+                <select class="select input form-control" id="hear" required="required" name="hear">
                   <option class="select__el" data-index="0" value="">---
                   </option>
                   <option class="select__el" data-index="1" value="1">Studio
@@ -108,10 +104,6 @@
                   <option class="select__el" data-index="7" value="7">3 bedroom(large, many items)
                   </option>
                   <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
-                  </option>
-                  <option class="select__el" data-index="9" value="">4 bedroom(large, many items)
-                  </option>
-                  <option class="select__el" data-index="10" value="">Commercial(avg. size, avg. items)
                   </option>
                   <option class="select__el" data-index="11" value="last">Commercial(large, many items)
                   </option>
@@ -131,8 +123,8 @@
           </form>
         </div>
       </section>
-      <section class="container-fluid">
-        <div class="container services clearfix" id="services">
+      <div class="container-fluid">
+        <section class="container services clearfix" id="services">
           <div class="services-card">
             <div class="img-wrapper"><img class="img-wrapper__img" src="./images/1.png" alt="" role="presentation"/>
             </div>
@@ -173,8 +165,8 @@
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <section class="container-fluid reasons">
         <section class="container clearfix" id="advantages">
           <div class="reasons-container">
@@ -379,7 +371,7 @@
                     <label class="input-group__label" for="popupto">TO:
                     </label><input class="input-group__input form-control" type="text" id="popupto" placeholder="city of zip code" name="popupto" required="required"/>
                   </div>
-                  <div class="input-group">
+                  <div class="input-group input-group--select">
                     <label class="input-group__label" for="popupsize">HOME SIZE:
                     </label>
                     <select class="select input form-control form-control--select" id="popupsize" name="popupsize" required="required">
@@ -401,10 +393,6 @@
                       </option>
                       <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
                       </option>
-                      <option class="select__el" data-index="9" value="">4 bedroom(large, many items)
-                      </option>
-                      <option class="select__el" data-index="10" value="">Commercial(avg. size, avg. items)
-                      </option>
                       <option class="select__el" data-index="11" value="last">Commercial(large, many items)
                       </option>
                     </select>
@@ -419,7 +407,7 @@
                     <label class="input-group__label" for="popupname">YOUR NAME:
                     </label><input class="input-group__input form-control" type="text" required="required" id="popupname" placeholder="your name" name="popupname"/>
                   </div>
-                  <div class="input-group">
+                  <div class="input-group input-group--select">
                     <label class="input-group__label" for="popuphear">HOW DID YOU HEAR ABOUT US:
                     </label>
                     <select class="select input form-control form-control--select" id="popuphear" required="required" name="popuphear">
@@ -441,10 +429,6 @@
                       </option>
                       <option class="select__el" data-index="8" value="8">4 bedroom(avg. size, avg. items)
                       </option>
-                      <option class="select__el" data-index="9" value="">4 bedroom(large, many items)
-                      </option>
-                      <option class="select__el" data-index="10" value="">Commercial(avg. size, avg. items)
-                      </option>
                       <option class="select__el" data-index="11" value="last">Commercial(large, many items)
                       </option>
                     </select>
@@ -457,11 +441,11 @@
                     <label class="input-group__label" for="popupemail">EMAIL :
                     </label><input class="input-group__input form-control" type="text" required="required" placeholder="your email" id="popupemail" name="popupemail"/>
                   </div>
-                  <div class="input-group input-group--button"><input class="action-btn action-btn--submit" type="submit" value="get started"/>
+                  <div class="input-group input-group--button"><input class="action-btn action-btn--submit popup-with-zoom-anim" type="submit" value="get started" href="#thanks"/>
                   </div>
                 </div>
               </form>
-              <div class="dialog zoom-anim-dialog mfp-hide">
+              <div class="dialog zoom-anim-dialog mfp-hide" id="thanks">
                 <h1 class="dialog__el">Thank you! Our manager will contact you as soon as possible!
                 </h1>
               </div>
